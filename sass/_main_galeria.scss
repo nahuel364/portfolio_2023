@@ -1,0 +1,26 @@
+.main__galeria{
+    background-image: url(../assets/img/denim.webp);
+    color: aliceblue;
+    .section__galeria{
+        padding: 50px;
+        h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+        .hover_img{
+            img{
+                transition:all 1s;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                    cursor: pointer;
+                }
+           }
+        }
+    }
+}

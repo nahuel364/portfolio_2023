@@ -1,0 +1,51 @@
+.main__contacto{
+    background-image: url(../assets/img/denim.webp);
+    color: aliceblue;
+    .section__contacto{
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+    }
+    .section__contacto2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        padding-bottom: 5rem;
+        .map{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45rem;
+            height: 35rem;
+            background-color: #94935D;
+            box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
+            -webkit-box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
+            margin-right: 20rem;
+            iframe{
+                padding: 0px auto;
+            }    
+        }
+        .link{
+            a{
+                font-size: 7rem;
+                margin: 20px;
+                color: #F2FF00;
+            }
+           
+        }
+    }
+}

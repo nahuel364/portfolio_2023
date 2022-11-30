@@ -1,0 +1,36 @@
+.main__cv{
+    background-image: url(../assets/img/denim.webp);
+    color: aliceblue;
+    .section__cv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem;
+        h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size:2rem;
+            padding-bottom: 50px; 
+        }
+        .bton_descargar{
+            display: flex;
+            width: 18rem;
+            height: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            color: #1D1C0D;
+            background-color:#F2FF00;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1rem 1rem 1px rgba(0,0,0,0.8);
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}  

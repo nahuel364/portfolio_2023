@@ -1,0 +1,117 @@
+
+/* ESTILOS SLIDER */
+
+.cont_slider{
+    height: 80vh;
+    margin-top: 6rem;
+    background-image: url(../assets/img/f_sliderd.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    .filtro{
+        height: 100%;
+        backdrop-filter:blur(2px);
+        .slider{
+            width: 80%;
+            .carousel-item{
+                height: 70vh;
+                img{
+                    height: 100%;
+                    object-fit:contain; 
+                }
+            }
+        }
+    } 
+}
+
+/* SECCION SOBRE MI */
+
+.sobre__mi{
+    height: 50rem;
+    background-image: url(../assets/img/yo_c.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+    h2{
+        font-family:$tipografia-titulos;
+        font-weight: 400;
+        text-align: center;
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        margin-bottom: 5rem;
+        background-color: rgba(240, 248, 255, 0.24);
+        color: #94935D;
+        text-shadow: 5px 0px 1px #1D1C0D;
+    }
+    .sobre_mi_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 2rem 3rem;
+        height: 50%;
+        margin-left: 3rem;
+        color: #fff;
+        font-size: 2rem;
+        border-radius: 1rem;
+        background-color: rgba(0,0,0,0.3);
+        backdrop-filter:blur(5px);
+    }
+}
+
+/* SECCION PORTFOLIO */
+
+#portfolio{
+    min-height: 50rem;
+    max-height:100%;
+    background-image: url(../assets/img/fondo_port.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    h2{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 5rem;
+    background-color: rgba(240, 248, 255, 0.24);
+    color: #fff;
+    text-shadow: 5px 0px 1px #1D1C0D;
+    }
+    .porfolio_card{
+        background-color:rgba(148, 147, 93,0.3);
+        backdrop-filter:blur(5px);
+        border-radius: 0.5rem;
+        box-shadow:0 0 10px #1D1C0D;
+        .text{
+            p{
+                font-size: 1.5rem;
+                color: aliceblue;
+                letter-spacing:2px;
+            }
+            a{
+                font-size: 2.5rem;
+                background-color: #459F92;
+                font-family: 'Oswald', sans-serif;
+                border: 0.8rem solid #459F92;
+                color: aliceblue;
+                transition: all 400ms;
+                &:hover{
+                    background-color: aliceblue;  
+                    color: #459F92;
+                        }
+                }
+            }
+        }
+}
+
+.contenedor{
+@include direccion(column);
+}
+.cont_uno{
+@include box-modelin;
+background-color: #1D1C0D;
+}
+.cont_dos{
+@include box-modelin;
+}

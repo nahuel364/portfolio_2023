@@ -1,0 +1,31 @@
+$tipografia-titulos:'Oswald', sans-serif;
+$tipografia-general:'Roboto Slab', serif; 
+
+/*MAPS*/
+$colores-pagina:(
+principal: #1D1C0D,
+secundario: #94935D,
+hover: #F2FF00,
+bton: #459F92,
+titulos: aliceblue,
+);
+$direccion:(
+row:row,
+column:column,
+);
+/*MIXINS*/
+@mixin box-modelin {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5%;
+    border: #459F92 solid 2rem;
+    background-color: #94935D;
+    margin: 1rem;
+}
+@mixin direccion($direccion) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: center;
+    align-items: center;
+    
+}
