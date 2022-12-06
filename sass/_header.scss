@@ -1,7 +1,7 @@
 header{
     position: fixed;
     top: 0;
-    left: 0;;
+    left: 0;
     right: 0;
     z-index: 10;
     .nav_exterior{
@@ -53,10 +53,11 @@ header{
             font-size: 3rem;
             font-family: 'Oswald', sans-serif;
             text-decoration: none;
+            padding-right: 1rem;
             color: map-get($map:$colores-pagina, $key:titulos );
             &:hover{
                 color:map-get($map:$colores-pagina, $key:hover );
-                border-bottom: #1D1C0D 0.3rem solid;
+                border-right: #1D1C0D 0.3rem solid;
             }
         }
         .icon_menu{

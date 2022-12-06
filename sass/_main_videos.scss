@@ -1,20 +1,14 @@
 .main__video{
-    display: flex;
-    background-image: url(../assets/img/denim.webp);
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
+    background-image: url(../assets/img/fondo_galeriab.jpg);
+    color:map-get($map:$colores-pagina , $key:principal);
     padding: 5rem;
+    padding-top: 10rem;
     .section__videos{
-        h2{
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            margin-bottom: 10px;
+        h1{
+           @include h1_paginas;
         }
         p{
-            font-size:2rem;
-            margin-bottom: 50px;
+            @include p_paginas;
         }
     }
 }

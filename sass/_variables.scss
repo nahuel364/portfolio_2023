@@ -1,6 +1,7 @@
+/*VARIABLES*/
 $tipografia-titulos:'Oswald', sans-serif;
 $tipografia-general:'Roboto Slab', serif; 
-
+$hover-scale: transform 600ms;
 /*MAPS*/
 $colores-pagina:(
 principal: #1D1C0D,
@@ -9,23 +10,29 @@ hover: #F2FF00,
 bton: #459F92,
 titulos: aliceblue,
 );
-$direccion:(
-row:row,
-column:column,
-);
+
 /*MIXINS*/
-@mixin box-modelin {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 5%;
-    border: #459F92 solid 2rem;
-    background-color: #94935D;
-    margin: 1rem;
+@mixin h1_paginas{
+    width:90vw;
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    font-family:$tipografia-titulos;
+    border:map-get($map:$colores-pagina , $key:principal ) solid 0.5rem ;   
 }
-@mixin direccion($direccion) {
-    display: flex;
-    flex-direction: $direccion;
-    justify-content: center;
-    align-items: center;
-    
+@mixin p_paginas {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-family:$tipografia-general;
+}
+
+@mixin estilos_hover{
+    color: map-get($map:$colores-pagina, $key:hover);
+    transform: scale(1.5,1.5);
+}
+@mixin texto-mayus {
+    text-transform: uppercase;
+    letter-spacing: 15px;
 }

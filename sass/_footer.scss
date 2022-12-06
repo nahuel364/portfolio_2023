@@ -1,6 +1,5 @@
 footer{
     background-color: black;
-    /* height: 150px; */
     display: flex;
     flex-direction: column;
     .footer__nav{
@@ -8,15 +7,16 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding:2rem;
+        margin-top:3rem;
         a{
             color: aliceblue;
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 3rem;
             letter-spacing: 5px;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            
             &:hover{
-                color: #F2FF00;
+                color: map-get($map:$colores-pagina, $key:hover);
             }
         }
     }
@@ -24,17 +24,20 @@ footer{
         display: flex;
         justify-content: space-around;
         a{
-        font-size: 4rem;
-        margin: 10px;
+        font-size: 5rem;
+        margin:2rem;
+        margin-bottom: 3rem;
         color: aliceblue;
+        transition:transform 600ms;
             &:hover{
-                color: #F2FF00;
+                color: map-get($map:$colores-pagina, $key:hover);
+                transform: scale(1.5,1.5);
             }
         }   
     }
     .footer__section__1{
         height: 40px;
-        background-color:#1D1C0D;
+        background-color:map-get($map:$colores-pagina , $key:principal );
         text-transform: uppercase;
         letter-spacing: 5px;
         color: aliceblue;
@@ -49,14 +52,22 @@ footer{
         .footer__nav{
             flex-direction: row;
             justify-content: space-around;
-            padding-top: 5rem;    
-            height: 1rem;
-        }
-        .footer__redes{
-            justify-content: center;
-            height: 12rem;
+            padding-top: 1rem;
+               
             a{
-                margin: 5rem;
+                width: fit-content;
+                padding: 0.5rem;
+                border:solid 0.3rem black;
+                font-size:2rem;
+                &:hover{
+                    border-left:solid 0.3rem #fff;
+                }
+            }
+            }
+        .footer__redes{
+            justify-content:center;
+            a{
+                margin: 2rem;
             }
         }
     }

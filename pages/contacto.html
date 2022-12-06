@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="keywords" content="portfolio, contacto, email, whatsap, formulario">
+    <meta name="description" content="En esta sección podrás contactarme y consultarme por alguna muestra de mi trabajo o colaboración para futuros proyectos">
     <!-- link_bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- estilos_css -->
@@ -15,8 +18,8 @@
     <!-- iconos -->
     <script src="https://kit.fontawesome.com/1ac63a5379.js" crossorigin="anonymous"></script>
     <!-- icono_pagina -->
-    <link rel="icon" href="">
-    <title>Document</title>
+    <link rel="icon" href="../assets/img/favicon.ico">
+    <title>Veliz_Nahuel-contacto</title>
 </head>
 
 <body>
@@ -64,25 +67,50 @@
           </div>
         </div>
       </header>
-    <main class="main__contacto">
-        <section class="section__contacto">
-            <h2>contacto</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus sequi recusandae sapiente, aliquid similique, vel ipsa maiores atque modi vero excepturi? Sunt hic cupiditate nisi aut, reprehenderit autem magnam laboriosam?</p>
-        </section>  
-        <section class="section__contacto2">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13122.072150380802!2d-58.76283288471681!3d-34.69211161232533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc004497ba6df%3A0x57781ea8ef1de90!2sParque%20San%20Mart%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1666733938332!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>    
 
-            <div class="link">
-                <a href=" https://wa.me/1159347414" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-                <a href="mailto:nahuel_veliz@hotmail.com" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
-            </div>
-        </section>      
+    <main class="main__contacto">
+        <h1 class="text-center">contacto</h1>
+
+            <section class="d-flex flex-md-row flex-sm-column text-center 
+            contacto_info">
             
-        
-        
+                  <div class="col-md-6 col-sm-12 contacto_text">
+                    <h2>consultame</h2>
+                    <p>Gracias por el interés en mi trabajo, podes contactarme con los siguientes enlaces que te brindo más abajo, también podes escribirme por medio del formulario para cualquier duda o interés en algún proyecto, gracias.</p>
+                    <div class="d-flex flex-column align-items-start link">
+                      <div class="link_wassap">
+                        <h3>11-5934-7414</h3>
+                      <a href=" https://wa.me/1159347414" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    </div>
+
+                    <div class="link_email">
+                      <h3>Nahuel_Veliz@hotmail.com</h3>
+                      <a href="mailto:nahuel_veliz@hotmail.com" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
+                    </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 contacto_form"> 
+                      <form>
+                        <input type="text" name="nombre" placeholder="nombre">
+                        <input type="text" name="email" placeholder="email">
+                        <textarea name="mensaje"  placeholder="Escribi aqui tu mensaje"></textarea>
+                        <input type="button" value="ENVIAR" id="boton">
+                      </form>
+
+                  </div>
+
+            </section> 
+
+        <section class="contacto_maps">
+          <div class="col-md-10 col-sm-10 map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13122.072150380802!2d-58.76283288471681!3d-34.69211161232533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc004497ba6df%3A0x57781ea8ef1de90!2sParque%20San%20Mart%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1666733938332!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>     
+            
     </main>
+
     <footer>
         <section class="footer__nav">
                 <a href="../index.html">INICIO</a>
