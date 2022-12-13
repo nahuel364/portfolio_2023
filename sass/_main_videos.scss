@@ -11,4 +11,20 @@
             @include p_paginas;
         }
     }
+    .video{
+        iframe{
+            width: 400px;
+            height: 300px;
+        }
+    }
+}
+/*RESPONSIVE*/
+@media(min-width:768px){
+    .main__video{
+        .video{
+            iframe{
+                width:50vw;
+            }
+        }
+    }
 }

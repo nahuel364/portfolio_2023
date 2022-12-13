@@ -36,3 +36,9 @@ titulos: aliceblue,
     text-transform: uppercase;
     letter-spacing: 15px;
 }
+@mixin cont_flex($f_direction,$a_items,$j_content) {
+    display: flex;
+    flex-direction:$f_direction;
+    align-items:$a_items;
+    justify-content:$j_content;
+}

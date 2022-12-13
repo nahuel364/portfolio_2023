@@ -11,7 +11,7 @@
         h1{
            @include h1_paginas;
            border-color: aliceblue;
-           margin-bottom: 15rem;
+           margin-bottom: 10rem;
         }
         p{
             @include p_paginas;

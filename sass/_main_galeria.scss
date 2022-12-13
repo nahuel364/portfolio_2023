@@ -10,14 +10,23 @@
         p{
             @include p_paginas;
         }
-        .hover_img{
-            img{
-                transition:all 1s;
-                &:hover{
-                    transform: scale(1.5,1.5);
-                    cursor: pointer;
+    }
+}
+
+/*RESPONSIVE*/
+
+@media(min-width:768px){
+    .main__galeria{
+        .section__galeria{
+            .hover_img{
+                img{
+                    transition:all 1s;
+                    &:hover{
+                        transform: scale(1.5,1.5);
+                        cursor: pointer;
+                        }
                 }
-           }
+            }
         }
     }
 }

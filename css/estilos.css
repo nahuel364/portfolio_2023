@@ -51,7 +51,7 @@ header {
         color: aliceblue;
         order: 2;
         transition: transform 600ms; }
-        header .nav_interior .redes a:hover {
+        header .nav_interior .redes a:active {
           color: #F2FF00;
           transform: scale(1.5, 1.5); }
   header .nav_interior_menu a {
@@ -60,7 +60,7 @@ header {
     text-decoration: none;
     padding-right: 1rem;
     color: aliceblue; }
-    header .nav_interior_menu a:hover {
+    header .nav_interior_menu a:active {
       color: #F2FF00;
       border-right: #1D1C0D 0.3rem solid; }
   header .nav_interior_menu .icon_menu {
@@ -69,10 +69,19 @@ header {
     margin-right: 2rem;
     font-size: 2.5rem; }
 
+/*RESPONSIVE*/
+@media (min-width: 768px) {
+  header .nav_interior .redes a:hover {
+    color: #F2FF00;
+    transform: scale(1.5, 1.5); }
+  header .nav_interior_menu a:hover {
+    color: #F2FF00;
+    border-right: #1D1C0D 0.3rem solid; } }
+
 /* ESTILOS SLIDER */
 .cont_slider {
-  height: 90vh;
-  margin-top: 6rem;
+  height: 50%;
+  margin-top: 1rem;
   background-image: url(../assets/img/f_sliderd.jpg);
   background-size: cover;
   background-attachment: fixed; }
@@ -82,11 +91,11 @@ header {
     backdrop-filter: blur(2px); }
     .cont_slider .filtro .slider {
       width: 80%;
-      padding-top: 15rem; }
+      padding-top: 5rem;
+      padding-bottom: 5rem; }
       .cont_slider .filtro .slider .carousel-item {
-        height: 70vh; }
+        height: 50%; }
         .cont_slider .filtro .slider .carousel-item img {
-          height: 100%;
           object-fit: contain; }
 
 /* SECCION SOBRE MI */
@@ -112,7 +121,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    height: 50%;
+    min-height: 50%;
     margin-left: 3rem;
     font-family: "Roboto Slab", serif;
     color: #fff;
@@ -156,9 +165,17 @@ header {
       border: 0.8rem solid #459F92;
       color: aliceblue;
       transition: all 400ms; }
-      #portfolio .porfolio_card .text a:hover {
+      #portfolio .porfolio_card .text a:active {
         background-color: aliceblue;
         color: #459F92; }
+
+@media (min-width: 1000px) {
+  .cont_slider {
+    height: 100vh;
+    margin-top: 3rem; }
+  #portfolio .porfolio_card .text a:hover {
+    background-color: aliceblue;
+    color: #459F92; } }
 
 footer {
   background-color: black;
@@ -176,7 +193,7 @@ footer {
       font-size: 3rem;
       letter-spacing: 5px;
       margin-bottom: 2rem; }
-      footer .footer__nav a:hover {
+      footer .footer__nav a:active {
         color: #F2FF00; }
   footer .footer__redes {
     display: flex;
@@ -187,11 +204,11 @@ footer {
       margin-bottom: 3rem;
       color: aliceblue;
       transition: transform 600ms; }
-      footer .footer__redes a:hover {
+      footer .footer__redes a:active {
         color: #F2FF00;
         transform: scale(1.5, 1.5); }
   footer .footer__section__1 {
-    height: 40px;
+    min-height: 40px;
     background-color: #1D1C0D;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -210,11 +227,15 @@ footer {
       border: solid 0.3rem black;
       font-size: 2rem; }
       footer .footer__nav a:hover {
+        color: #F2FF00;
         border-left: solid 0.3rem #fff; }
   footer .footer__redes {
     justify-content: center; }
     footer .footer__redes a {
-      margin: 2rem; } }
+      margin: 2rem; }
+      footer .footer__redes a:hover {
+        color: #F2FF00;
+        transform: scale(1.5, 1.5); } }
 
 .main__galeria {
   background-image: url(../assets/img/fondo_galeriab.jpg);
@@ -234,11 +255,14 @@ footer {
     font-size: 2rem;
     margin-bottom: 50px;
     font-family: "Roboto Slab", serif; }
+
+/*RESPONSIVE*/
+@media (min-width: 768px) {
   .main__galeria .section__galeria .hover_img img {
     transition: all 1s; }
     .main__galeria .section__galeria .hover_img img:hover {
       transform: scale(1.5, 1.5);
-      cursor: pointer; }
+      cursor: pointer; } }
 
 .main__video {
   background-image: url(../assets/img/fondo_galeriab.jpg);
@@ -258,6 +282,14 @@ footer {
     font-size: 2rem;
     margin-bottom: 50px;
     font-family: "Roboto Slab", serif; }
+  .main__video .video iframe {
+    width: 400px;
+    height: 300px; }
+
+/*RESPONSIVE*/
+@media (min-width: 768px) {
+  .main__video .video iframe {
+    width: 50vw; } }
 
 .main__cv {
   background-image: url(../assets/img/denim.webp);
@@ -279,7 +311,7 @@ footer {
       font-family: "Oswald", sans-serif;
       border: #1D1C0D solid 0.5rem;
       border-color: aliceblue;
-      margin-bottom: 15rem; }
+      margin-bottom: 10rem; }
     .main__cv .section__cv p {
       font-size: 2rem;
       margin-bottom: 50px;
@@ -314,7 +346,8 @@ footer {
   flex-direction: column;
   background-image: url(../assets/img/fondo_galeriab.jpg);
   padding-top: 10rem;
-  color: #1D1C0D; }
+  color: #1D1C0D;
+  width: 100%; }
   .main__contacto h1 {
     width: 90vw;
     font-size: 7rem;
@@ -327,15 +360,18 @@ footer {
     align-self: center; }
   .main__contacto .contacto_info {
     display: flex;
-    padding: 50px;
+    padding: 5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
     .main__contacto .contacto_info .contacto_text {
+      background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
+      background-size: cover;
+      background-position: left;
       min-height: 55rem;
       padding-top: 3rem;
       background-color: rgba(29, 28, 13, 0.8);
-      padding-bottom: 5rem;
+      padding-bottom: 3rem;
       border: solid 0.5rem aliceblue; }
       .main__contacto .contacto_info .contacto_text h2 {
         font-size: 4rem;
@@ -354,9 +390,9 @@ footer {
       .main__contacto .contacto_info .contacto_text .link a {
         font-size: 5rem;
         color: aliceblue;
-        margin-left: 5rem;
+        margin-left: 2rem;
         transition: transform 600ms; }
-        .main__contacto .contacto_info .contacto_text .link a:hover {
+        .main__contacto .contacto_info .contacto_text .link a:active {
           color: #F2FF00;
           transform: scale(1.5, 1.5); }
       .main__contacto .contacto_info .contacto_text .link .link_wassap {
@@ -374,9 +410,12 @@ footer {
           color: aliceblue;
           order: 2;
           padding-left: 2rem;
-          letter-spacing: 5px; }
+          letter-spacing: 2px; }
     .main__contacto .contacto_info .contacto_form {
-      height: 55rem;
+      background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
+      background-size: cover;
+      background-position: right;
+      min-height: 55rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -384,7 +423,7 @@ footer {
       background-color: rgba(29, 28, 13, 0.8);
       border: solid 0.5rem aliceblue; }
       .main__contacto .contacto_info .contacto_form form {
-        width: 50rem;
+        width: 70%;
         padding-top: 3rem; }
         .main__contacto .contacto_info .contacto_form form input {
           width: 60%;
@@ -405,16 +444,14 @@ footer {
           background-color: #459F92;
           font-family: "Oswald", sans-serif;
           border: 0.8rem solid #459F92;
-          color: aliceblue;
-          transition: all 400ms; }
-          .main__contacto .contacto_info .contacto_form form #boton:hover {
+          color: aliceblue; }
+          .main__contacto .contacto_info .contacto_form form #boton:active {
             background-color: aliceblue;
             color: #459F92; }
   .main__contacto .contacto_maps {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     padding-bottom: 5rem; }
     .main__contacto .contacto_maps .map {
       box-shadow: 0px 0px 16px 9px black;
@@ -422,10 +459,64 @@ footer {
       -moz-box-shadow: 0px 0px 16px 9px black; }
 
 /*RESPONSIVE*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .main__contacto .contacto_info .contacto_text {
-    border: none; }
+    border: none;
+    margin-right: 1rem; }
+    .main__contacto .contacto_info .contacto_text .link a {
+      transition: transform 600ms; }
+      .main__contacto .contacto_info .contacto_text .link a:hover {
+        color: #F2FF00;
+        transform: scale(1.5, 1.5); }
   .main__contacto .contacto_info .contacto_form {
     border: none; }
     .main__contacto .contacto_info .contacto_form form {
-      border: solid 0.5rem aliceblue; } }
+      border: solid 0.5rem aliceblue; }
+      .main__contacto .contacto_info .contacto_form form #boton {
+        transition: all 400ms; }
+        .main__contacto .contacto_info .contacto_form form #boton:hover {
+          background-color: aliceblue;
+          color: #459F92; } }
+
+body {
+  background-image: url(../assets/img/fondo_404.JPG);
+  background-size: contain;
+  background-repeat: repeat; }
+  body .main_404 p {
+    background-color: black;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-family: "Roboto Slab", serif;
+    color: aliceblue;
+    font-size: 3rem;
+    margin-bottom: 40rem; }
+  body .main_404 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    body .main_404 div a {
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 10px; }
+      body .main_404 div a .bton_volver {
+        padding: 1rem;
+        width: fit-content;
+        height: 4rem;
+        background-color: #459F92;
+        font-family: "Oswald", sans-serif;
+        border: 0.3rem solid #459F92;
+        color: aliceblue;
+        border-radius: 1rem;
+        transition: all 400ms; }
+        body .main_404 div a .bton_volver:hover {
+          background-color: aliceblue;
+          color: #459F92; }
+
+/*RESPONSIVE*/
+@media (min-width: 768px) {
+  body {
+    background-size: cover;
+    background-repeat: no-repeat; }
+    body .main_404 p {
+      margin-bottom: 50rem; } }

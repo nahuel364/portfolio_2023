@@ -4,22 +4,25 @@
     background-image: url(../assets/img/fondo_galeriab.jpg);
     padding-top: 10rem;
     color:map-get($map:$colores-pagina , $key:principal );
+    width: 100%;
     h1{
         @include h1_paginas;
         align-self: center;
     }
     .contacto_info{
         display: flex;
-        padding: 50px;
+        padding: 5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
         .contacto_text{
+            background: linear-gradient(rgba(29, 28, 13,0.50),rgba(29,28,13,0.50)), url(../assets/img/fondo_contacto.JPG);
+            background-size: cover;
+            background-position: left;
             min-height: 55rem;
             padding-top:3rem;
-            background-color: rgba(29, 28, 13,0.8);
-            padding-bottom: 5rem;
+            background-color: rgba(29, 28, 13,0.8); 
+            padding-bottom: 3rem;
             border: solid 0.5rem aliceblue;
             h2{
                 font-size: 4rem;
@@ -38,9 +41,9 @@
                 a{
                     font-size: 5rem;
                     color:map-get($map:$colores-pagina , $key:titulos );
-                    margin-left: 5rem;
+                    margin-left: 2rem;
                     transition: $hover-scale;
-                    &:hover{
+                    &:active{
                         @include estilos_hover;
                     }
                 }
@@ -61,13 +64,16 @@
                         color: aliceblue;
                         order: 2;
                         padding-left: 2rem;
-                        letter-spacing: 5px;
+                        letter-spacing: 2px;
                     }
                 }
             }
         }
         .contacto_form{
-            height: 55rem;
+            background: linear-gradient(rgba(29, 28, 13,0.50),rgba(29,28,13,0.50)), url(../assets/img/fondo_contacto.JPG);
+            background-size: cover;
+            background-position: right;
+            min-height: 55rem;
             display: flex;
             flex-direction: column;
             justify-content:center;
@@ -75,8 +81,7 @@
             background-color: rgba(29, 28, 13,0.8);
             border: solid 0.5rem aliceblue;
             form{
-                width: 50rem;
-               
+                width: 70%;
                 padding-top: 3rem;
                 input{
                     width: 60%;
@@ -100,9 +105,7 @@
                     font-family:$tipografia-titulos;
                     border: 0.8rem solid #459F92;
                     color: aliceblue;
-                    transition: all 400ms;
-                    
-                    &:hover{
+                    &:active{
                         background-color: aliceblue;  
                         color: #459F92;
                             }
@@ -114,7 +117,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1rem;
         padding-bottom: 5rem;
         .map{
             box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
@@ -126,18 +128,35 @@
 
 /*RESPONSIVE*/
 
-@media (min-width:768px){
+@media (min-width:992px){
     .main__contacto{
         .contacto_info{
             .contacto_text{
                 border: none;
-            }
-            .contacto_form{
-                border: none;
-                form{
-                    border: solid 0.5rem aliceblue;
+                margin-right: 1rem;
+                .link{
+                    a{
+                        transition: $hover-scale;
+                        &:hover{
+                                @include estilos_hover;
+                            } 
+                        }
+                    }
+                }
+                .contacto_form{
+                    border: none;
+                    form{
+                        border: solid 0.5rem aliceblue;
+                        #boton{
+                            transition: all 400ms;
+                            &:hover{
+                                background-color: aliceblue;  
+                                color: #459F92;
+                            }
+                        }
+                    }
                 }
             }
+            
         }
     }
-}
