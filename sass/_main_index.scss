@@ -28,7 +28,7 @@
 /* SECCION SOBRE MI */
 
 .sobre__mi{
-    height: 60rem;
+    min-height: 60rem;
     background-image: url(../assets/img/yo_c.JPG);
     background-attachment: fixed;
     background-size: cover;
@@ -38,7 +38,7 @@
         text-align: center;
         font-size: 4rem;
         @include texto-mayus;
-        margin-bottom: 9rem;
+        margin-bottom: 4rem;
         background-color: rgba(240, 248, 255, 0.24);
         color: map-get($map:$colores-pagina , $key:titulos );
         text-shadow: 5px 0px 1px #1D1C0D;
@@ -51,6 +51,7 @@
         padding: 2rem;
         min-height: 50%;
         margin-left: 3rem;
+        padding-bottom: 1rem;
         font-family: $tipografia-general;
         color: #fff;
         font-size: 2rem;

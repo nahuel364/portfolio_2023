@@ -13,11 +13,13 @@ html {
 img {
   max-width: 100%; }
 
+body {
+  width: 100vw; }
+
 header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100vw;
   z-index: 10; }
   header .nav_exterior {
     height: 7rem;
@@ -37,6 +39,7 @@ header {
       header .nav_interior .redes #what {
         color: #25D366; }
       header .nav_interior .redes img {
+        display: none;
         width: 160px;
         height: 160px;
         border: solid 10px aliceblue;
@@ -74,6 +77,8 @@ header {
   header .nav_interior .redes a:hover {
     color: #F2FF00;
     transform: scale(1.5, 1.5); }
+  header .nav_interior .redes img {
+    display: block; }
   header .nav_interior_menu a:hover {
     color: #F2FF00;
     border-right: #1D1C0D 0.3rem solid; } }
@@ -100,7 +105,7 @@ header {
 
 /* SECCION SOBRE MI */
 .sobre__mi {
-  height: 60rem;
+  min-height: 60rem;
   background-image: url(../assets/img/yo_c.JPG);
   background-attachment: fixed;
   background-size: cover; }
@@ -111,7 +116,7 @@ header {
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 15px;
-    margin-bottom: 9rem;
+    margin-bottom: 4rem;
     background-color: rgba(240, 248, 255, 0.24);
     color: aliceblue;
     text-shadow: 5px 0px 1px #1D1C0D; }
@@ -123,6 +128,7 @@ header {
     padding: 2rem;
     min-height: 50%;
     margin-left: 3rem;
+    padding-bottom: 1rem;
     font-family: "Roboto Slab", serif;
     color: #fff;
     font-size: 2rem;
@@ -244,7 +250,7 @@ footer {
   color: #1D1C0D; }
   .main__galeria .section__galeria h1 {
     width: 90vw;
-    font-size: 7rem;
+    font-size: 500%;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-bottom: 5rem;
@@ -271,7 +277,7 @@ footer {
   padding-top: 10rem; }
   .main__video .section__videos h1 {
     width: 90vw;
-    font-size: 7rem;
+    font-size: 500%;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-bottom: 5rem;
@@ -283,7 +289,7 @@ footer {
     margin-bottom: 50px;
     font-family: "Roboto Slab", serif; }
   .main__video .video iframe {
-    width: 400px;
+    width: 90vw;
     height: 300px; }
 
 /*RESPONSIVE*/
@@ -303,7 +309,7 @@ footer {
     padding: 5rem; }
     .main__cv .section__cv h1 {
       width: 90vw;
-      font-size: 7rem;
+      font-size: 500%;
       text-transform: uppercase;
       letter-spacing: 10px;
       margin-bottom: 5rem;
@@ -344,26 +350,26 @@ footer {
 .main__contacto {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-image: url(../assets/img/fondo_galeriab.jpg);
   padding-top: 10rem;
-  color: #1D1C0D;
-  width: 100%; }
+  color: #1D1C0D; }
   .main__contacto h1 {
     width: 90vw;
-    font-size: 7rem;
+    font-size: 500%;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-bottom: 5rem;
     padding: 1rem;
     font-family: "Oswald", sans-serif;
     border: #1D1C0D solid 0.5rem;
-    align-self: center; }
+    overflow: hidden; }
   .main__contacto .contacto_info {
     display: flex;
-    padding: 5rem;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 90vw; }
     .main__contacto .contacto_info .contacto_text {
       background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
       background-size: cover;
@@ -371,46 +377,50 @@ footer {
       min-height: 55rem;
       padding-top: 3rem;
       background-color: rgba(29, 28, 13, 0.8);
-      padding-bottom: 3rem;
       border: solid 0.5rem aliceblue; }
       .main__contacto .contacto_info .contacto_text h2 {
-        font-size: 4rem;
+        text-align: center;
+        font-size: 2rem;
         font-weight: bold;
         padding-bottom: 2rem;
         font-family: "Oswald", sans-serif;
         color: aliceblue;
         text-transform: uppercase;
-        letter-spacing: 15px; }
+        letter-spacing: 15px;
+        letter-spacing: 5px; }
       .main__contacto .contacto_info .contacto_text p {
         font-size: 2rem;
         margin-bottom: 50px;
         font-family: "Roboto Slab", serif;
         color: aliceblue;
-        padding: 2rem; }
+        padding: 0 2rem; }
       .main__contacto .contacto_info .contacto_text .link a {
         font-size: 5rem;
-        color: aliceblue;
-        margin-left: 2rem;
-        transition: transform 600ms; }
-        .main__contacto .contacto_info .contacto_text .link a:active {
-          color: #F2FF00;
-          transform: scale(1.5, 1.5); }
+        color: aliceblue; }
       .main__contacto .contacto_info .contacto_text .link .link_wassap {
         display: flex;
         align-items: center; }
         .main__contacto .contacto_info .contacto_text .link .link_wassap h3 {
           color: aliceblue;
           order: 2;
-          padding-left: 2rem;
           letter-spacing: 5px; }
+        .main__contacto .contacto_info .contacto_text .link .link_wassap a {
+          transition: transform 600ms; }
+          .main__contacto .contacto_info .contacto_text .link .link_wassap a:active {
+            color: #F2FF00;
+            transform: scale(1.5, 1.5); }
       .main__contacto .contacto_info .contacto_text .link .link_email {
         display: flex;
         align-items: center; }
         .main__contacto .contacto_info .contacto_text .link .link_email h3 {
           color: aliceblue;
           order: 2;
-          padding-left: 2rem;
           letter-spacing: 2px; }
+        .main__contacto .contacto_info .contacto_text .link .link_email a {
+          transition: transform 600ms; }
+          .main__contacto .contacto_info .contacto_text .link .link_email a:active {
+            color: #F2FF00;
+            transform: scale(1.5, 1.5); }
     .main__contacto .contacto_info .contacto_form {
       background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
       background-size: cover;
@@ -426,17 +436,17 @@ footer {
         width: 70%;
         padding-top: 3rem; }
         .main__contacto .contacto_info .contacto_form form input {
-          width: 60%;
+          width: 100%;
           margin-bottom: 3rem;
           font-size: 2rem;
           border: solid 0.5rem #94935D;
           border-radius: 1rem; }
         .main__contacto .contacto_info .contacto_form form textarea {
-          width: 60%;
+          width: 100%;
           font-size: 2rem;
           max-height: 15rem;
           min-height: 15rem;
-          margin-bottom: 2rem;
+          margin-bottom: 3rem;
           border: solid 0.5rem #94935D;
           border-radius: 1rem; }
         .main__contacto .contacto_info .contacto_form form #boton {
@@ -452,7 +462,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5rem; }
+    padding-bottom: 5rem;
+    margin-top: 3rem; }
     .main__contacto .contacto_maps .map {
       box-shadow: 0px 0px 16px 9px black;
       -webkit-box-shadow: 0px 0px 16px 9px black;
@@ -471,35 +482,37 @@ footer {
   .main__contacto .contacto_info .contacto_form {
     border: none; }
     .main__contacto .contacto_info .contacto_form form {
-      border: solid 0.5rem aliceblue; }
+      border: solid 0.5rem aliceblue;
+      padding: 2rem; }
       .main__contacto .contacto_info .contacto_form form #boton {
         transition: all 400ms; }
         .main__contacto .contacto_info .contacto_form form #boton:hover {
           background-color: aliceblue;
           color: #459F92; } }
 
-body {
+.body_404 {
   background-image: url(../assets/img/fondo_404.JPG);
-  background-size: contain;
-  background-repeat: repeat; }
-  body .main_404 p {
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh; }
+  .body_404 .main_404 p {
     background-color: black;
     font-size: 2rem;
     margin-bottom: 50px;
     font-family: "Roboto Slab", serif;
     color: aliceblue;
-    font-size: 3rem;
-    margin-bottom: 40rem; }
-  body .main_404 div {
+    font-size: 2rem;
+    margin-bottom: 30rem; }
+  .body_404 .main_404 div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    body .main_404 div a {
+    .body_404 .main_404 div a {
       text-decoration: none;
       text-align: center;
       letter-spacing: 10px; }
-      body .main_404 div a .bton_volver {
+      .body_404 .main_404 div a .bton_volver {
         padding: 1rem;
         width: fit-content;
         height: 4rem;
@@ -509,14 +522,13 @@ body {
         color: aliceblue;
         border-radius: 1rem;
         transition: all 400ms; }
-        body .main_404 div a .bton_volver:hover {
+        .body_404 .main_404 div a .bton_volver:hover {
           background-color: aliceblue;
           color: #459F92; }
 
 /*RESPONSIVE*/
 @media (min-width: 768px) {
-  body {
-    background-size: cover;
-    background-repeat: no-repeat; }
-    body .main_404 p {
-      margin-bottom: 50rem; } }
+  .body_404 {
+    background-position: center; }
+    .body_404 .main_404 p {
+      margin-bottom: 35rem; } }

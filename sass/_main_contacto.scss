@@ -1,20 +1,21 @@
 .main__contacto{
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-image: url(../assets/img/fondo_galeriab.jpg);
     padding-top: 10rem;
     color:map-get($map:$colores-pagina , $key:principal );
-    width: 100%;
     h1{
         @include h1_paginas;
-        align-self: center;
+        overflow:hidden;
     }
     .contacto_info{
         display: flex;
-        padding: 5rem;
+        // padding: 5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 90vw;
         .contacto_text{
             background: linear-gradient(rgba(29, 28, 13,0.50),rgba(29,28,13,0.50)), url(../assets/img/fondo_contacto.JPG);
             background-size: cover;
@@ -22,30 +23,26 @@
             min-height: 55rem;
             padding-top:3rem;
             background-color: rgba(29, 28, 13,0.8); 
-            padding-bottom: 3rem;
             border: solid 0.5rem aliceblue;
             h2{
-                font-size: 4rem;
+                text-align: center;
+                font-size: 2rem;
                 font-weight: bold;
                 padding-bottom: 2rem;
                 font-family:$tipografia-titulos;
                 color: map-get($map:$colores-pagina , $key:titulos);
-                @include texto-mayus; 
+                @include texto-mayus;
+                letter-spacing: 5px; 
             }
             p{
                 @include p_paginas;
                 color: map-get($map:$colores-pagina, $key:titulos);
-                padding: 2rem; 
+                padding: 0 2rem;
             }
             .link{
                 a{
                     font-size: 5rem;
                     color:map-get($map:$colores-pagina , $key:titulos );
-                    margin-left: 2rem;
-                    transition: $hover-scale;
-                    &:active{
-                        @include estilos_hover;
-                    }
                 }
                 .link_wassap{
                     display: flex;
@@ -53,8 +50,13 @@
                     h3{
                         color: aliceblue;
                         order: 2;
-                        padding-left: 2rem;
                         letter-spacing: 5px;
+                    }
+                    a{
+                        transition: $hover-scale;
+                        &:active{
+                            @include estilos_hover;
+                        }
                     }
                 }
                 .link_email{
@@ -63,8 +65,13 @@
                     h3{
                         color: aliceblue;
                         order: 2;
-                        padding-left: 2rem;
                         letter-spacing: 2px;
+                    }
+                    a{
+                        transition: $hover-scale;
+                        &:active{
+                            @include estilos_hover;
+                        }
                     }
                 }
             }
@@ -84,18 +91,18 @@
                 width: 70%;
                 padding-top: 3rem;
                 input{
-                    width: 60%;
+                    width: 100%;
                     margin-bottom: 3rem; 
                     font-size: 2rem;
                     border: solid 0.5rem map-get($map:$colores-pagina , $key:secundario);
                     border-radius: 1rem;
                 }
                 textarea{
-                    width: 60%;
+                    width: 100%;
                     font-size: 2rem;
                     max-height: 15rem;
                     min-height: 15rem;
-                    margin-bottom: 2rem;
+                    margin-bottom: 3rem;
                     border: solid 0.5rem map-get($map:$colores-pagina , $key:secundario);
                     border-radius: 1rem;
                 }
@@ -118,6 +125,7 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 5rem;
+        margin-top: 3rem;
         .map{
             box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
             -webkit-box-shadow: 0px 0px 16px 9px rgba(0,0,0,1);
@@ -147,6 +155,7 @@
                     border: none;
                     form{
                         border: solid 0.5rem aliceblue;
+                        padding: 2rem;
                         #boton{
                             transition: all 400ms;
                             &:hover{
