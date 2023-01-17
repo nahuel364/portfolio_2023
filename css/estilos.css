@@ -13,41 +13,36 @@ html {
 img {
   max-width: 100%; }
 
-body {
-  width: 100vw; }
-
 header {
   position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   z-index: 10; }
   header .nav_exterior {
-    height: 7rem;
     background-color: #1D1C0D; }
     header .nav_exterior a {
       font-size: 3rem;
       font-family: "Oswald", sans-serif;
       color: aliceblue; }
+      header .nav_exterior a h1 {
+        font-size: 3rem;
+        padding: 0 1rem;
+        border-right: solid aliceblue; }
+      header .nav_exterior a span {
+        font-family: "Roboto Slab", serif;
+        padding-left: 1rem;
+        font-size: 2rem; }
     header .nav_exterior .bton_menur {
       border: solid 0.5rem #94935D;
       font-size: 2rem; }
   header .nav_interior {
-    background-color: #94935D; }
+    background-image: url(../assets/img/f_menu_interior2.svg); }
     header .nav_interior .redes {
       display: flex;
       align-items: center; }
       header .nav_interior .redes #what {
         color: #25D366; }
-      header .nav_interior .redes img {
-        display: none;
-        width: 160px;
-        height: 160px;
-        border: solid 10px aliceblue;
-        border-radius: 90%;
-        background-image: url(../assets/img/perfil.JPG);
-        background-size: cover;
-        object-fit: cover;
-        order: 1; }
       header .nav_interior .redes a {
         font-size: 4rem;
         margin: 2rem;
@@ -64,8 +59,7 @@ header {
     padding-right: 1rem;
     color: aliceblue; }
     header .nav_interior_menu a:active {
-      color: #F2FF00;
-      border-right: #1D1C0D 0.3rem solid; }
+      color: #F2FF00; }
   header .nav_interior_menu .icon_menu {
     position: relative;
     top: -0.5rem;
@@ -77,23 +71,18 @@ header {
   header .nav_interior .redes a:hover {
     color: #F2FF00;
     transform: scale(1.5, 1.5); }
-  header .nav_interior .redes img {
-    display: block; }
   header .nav_interior_menu a:hover {
-    color: #F2FF00;
-    border-right: #1D1C0D 0.3rem solid; } }
+    color: #F2FF00; } }
 
 /* ESTILOS SLIDER */
 .cont_slider {
-  height: 50%;
-  margin-top: 1rem;
-  background-image: url(../assets/img/f_sliderd.jpg);
+  height: 60%;
+  background-image: url(../assets/img/f_prueba4.svg);
   background-size: cover;
   background-attachment: fixed; }
   .cont_slider .filtro {
     padding-top: 5rem;
-    height: 100%;
-    backdrop-filter: blur(2px); }
+    height: 100%; }
     .cont_slider .filtro .slider {
       width: 80%;
       padding-top: 5rem;
@@ -105,21 +94,34 @@ header {
 
 /* SECCION SOBRE MI */
 .sobre__mi {
-  min-height: 60rem;
-  background-image: url(../assets/img/yo_c.JPG);
-  background-attachment: fixed;
+  min-height: 80rem;
+  background-image: url(../assets/img/f_sliderb.jpg);
   background-size: cover; }
-  .sobre__mi h1 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    margin-bottom: 4rem;
-    background-color: rgba(240, 248, 255, 0.24);
-    color: aliceblue;
-    text-shadow: 5px 0px 1px #1D1C0D; }
+  .sobre__mi .sobre_mi_h2 {
+    min-height: 20rem;
+    background-image: url(../assets/img/f_sobremi.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 10%; }
+    .sobre__mi .sobre_mi_h2 h2 {
+      width: 30%;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      text-align: center;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      color: aliceblue;
+      text-shadow: 5px 0px 1px #1D1C0D;
+      border: aliceblue solid 0.5rem; }
+  .sobre__mi .img_yo {
+    border-radius: 100px 0px 100px 0px;
+    background-image: url(../assets/img/yo_c.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    margin-right: 3rem; }
   .sobre__mi .sobre_mi_text {
     display: flex;
     flex-direction: column;
@@ -127,53 +129,54 @@ header {
     align-items: center;
     padding: 2rem;
     min-height: 50%;
-    margin-left: 3rem;
     padding-bottom: 1rem;
-    font-family: "Roboto Slab", serif;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px); }
+    border: #1D1C0D solid 0.5rem; }
+    .sobre__mi .sobre_mi_text p {
+      font-family: "Roboto Slab", serif;
+      font-weight: 600;
+      color: #1D1C0D;
+      font-size: 2rem;
+      padding: 1rem; }
 
 /* SECCION PORTFOLIO */
 #portfolio {
-  min-height: 60rem;
-  max-height: 100%;
-  background-image: url(../assets/img/fondo_port.JPG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-  #portfolio h2 {
-    text-align: center;
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    margin-bottom: 7rem;
-    font-family: "Oswald", sans-serif;
-    background-color: rgba(240, 248, 255, 0.24);
-    color: #fff;
-    text-shadow: 5px 0px 1px #1D1C0D; }
-  #portfolio .porfolio_card {
-    background-color: rgba(148, 147, 93, 0.3);
-    backdrop-filter: blur(5px);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px #1D1C0D; }
-    #portfolio .porfolio_card .text p {
-      font-size: 1.5rem;
-      color: aliceblue;
-      letter-spacing: 2px;
-      font-family: "Roboto Slab", serif; }
-    #portfolio .porfolio_card .text a {
-      font-size: 2.5rem;
-      background-color: #459F92;
+  min-height: 80rem;
+  background-image: url(../assets/img/fondo_port.svg);
+  background-size: cover; }
+  #portfolio .portfolio_h2 {
+    min-height: 20rem;
+    background-image: url(../assets/img/fondo_port.JPG);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 1%; }
+    #portfolio .portfolio_h2 h2 {
+      width: 30%;
       font-family: "Oswald", sans-serif;
-      border: 0.8rem solid #459F92;
+      font-weight: 400;
+      text-align: center;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 15px;
       color: aliceblue;
-      transition: all 400ms; }
-      #portfolio .porfolio_card .text a:active {
-        background-color: aliceblue;
-        color: #459F92; }
+      text-shadow: 5px 0px 1px #1D1C0D;
+      border: aliceblue solid 0.5rem; }
+  #portfolio .porfolio_card a .card {
+    border-radius: 1rem; }
+  #portfolio .porfolio_card a:hover img {
+    filter: contrast(100%); }
+  #portfolio .porfolio_card a img {
+    border-radius: 1rem;
+    filter: contrast(50%);
+    transition: all 600ms; }
+  #portfolio .porfolio_card a .text {
+    font-size: 1.5rem; }
+    #portfolio .porfolio_card a .text h3 {
+      width: 30%;
+      border: aliceblue solid 0.3rem;
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase; }
 
 @media (min-width: 1000px) {
   .cont_slider {
@@ -348,43 +351,39 @@ footer {
         box-shadow: 1rem 1rem 1px rgba(0, 0, 0, 0.8); }
 
 .main__contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url(../assets/img/fondo_galeriab.jpg);
-  padding-top: 10rem;
-  color: #1D1C0D; }
-  .main__contacto h1 {
-    width: 90vw;
-    font-size: 500%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    margin-bottom: 5rem;
-    padding: 1rem;
-    font-family: "Oswald", sans-serif;
-    border: #1D1C0D solid 0.5rem;
-    overflow: hidden; }
+  min-height: 80rem;
+  background-image: url(../assets/img/f_prueba4.svg);
+  background-size: cover; }
+  .main__contacto .main_contacto_h2 {
+    min-height: 20rem;
+    background-image: url(../assets/img/f_contactob.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 1%; }
+    .main__contacto .main_contacto_h2 h2 {
+      width: 30%;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      text-align: center;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      color: aliceblue;
+      text-shadow: 5px 0px 1px #1D1C0D;
+      border: aliceblue solid 0.5rem; }
   .main__contacto .contacto_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90vw; }
+    padding: 5rem; }
     .main__contacto .contacto_info .contacto_text {
-      background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
-      background-size: cover;
-      background-position: left;
-      min-height: 55rem;
-      padding-top: 3rem;
-      background-color: rgba(29, 28, 13, 0.8);
-      border: solid 0.5rem aliceblue; }
-      .main__contacto .contacto_info .contacto_text h2 {
+      min-height: 40rem;
+      padding-top: 3rem; }
+      .main__contacto .contacto_info .contacto_text h3 {
         text-align: center;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         padding-bottom: 2rem;
         font-family: "Oswald", sans-serif;
-        color: aliceblue;
+        color: #1D1C0D;
         text-transform: uppercase;
         letter-spacing: 15px;
         letter-spacing: 5px; }
@@ -392,82 +391,45 @@ footer {
         font-size: 2rem;
         margin-bottom: 50px;
         font-family: "Roboto Slab", serif;
-        color: aliceblue;
-        padding: 0 2rem; }
+        color: #1D1C0D;
+        padding: 0 3rem; }
       .main__contacto .contacto_info .contacto_text .link a {
         font-size: 5rem;
-        color: aliceblue; }
+        color: #1D1C0D; }
       .main__contacto .contacto_info .contacto_text .link .link_wassap {
         display: flex;
         align-items: center; }
-        .main__contacto .contacto_info .contacto_text .link .link_wassap h3 {
-          color: aliceblue;
+        .main__contacto .contacto_info .contacto_text .link .link_wassap h4 {
+          font-size: 2rem;
+          color: #1D1C0D;
           order: 2;
           letter-spacing: 5px; }
         .main__contacto .contacto_info .contacto_text .link .link_wassap a {
-          transition: transform 600ms; }
+          transition: all 600ms; }
           .main__contacto .contacto_info .contacto_text .link .link_wassap a:active {
             color: #F2FF00;
             transform: scale(1.5, 1.5); }
       .main__contacto .contacto_info .contacto_text .link .link_email {
         display: flex;
         align-items: center; }
-        .main__contacto .contacto_info .contacto_text .link .link_email h3 {
-          color: aliceblue;
+        .main__contacto .contacto_info .contacto_text .link .link_email h4 {
+          font-size: 2rem;
+          color: #1D1C0D;
           order: 2;
           letter-spacing: 2px; }
         .main__contacto .contacto_info .contacto_text .link .link_email a {
-          transition: transform 600ms; }
+          transition: all 600ms; }
           .main__contacto .contacto_info .contacto_text .link .link_email a:active {
             color: #F2FF00;
             transform: scale(1.5, 1.5); }
-    .main__contacto .contacto_info .contacto_form {
-      background: linear-gradient(rgba(29, 28, 13, 0.5), rgba(29, 28, 13, 0.5)), url(../assets/img/fondo_contacto.JPG);
-      background-size: cover;
-      background-position: right;
-      min-height: 55rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(29, 28, 13, 0.8);
-      border: solid 0.5rem aliceblue; }
-      .main__contacto .contacto_info .contacto_form form {
-        width: 70%;
-        padding-top: 3rem; }
-        .main__contacto .contacto_info .contacto_form form input {
-          width: 100%;
-          margin-bottom: 3rem;
-          font-size: 2rem;
-          border: solid 0.5rem #94935D;
-          border-radius: 1rem; }
-        .main__contacto .contacto_info .contacto_form form textarea {
-          width: 100%;
-          font-size: 2rem;
-          max-height: 15rem;
-          min-height: 15rem;
-          margin-bottom: 3rem;
-          border: solid 0.5rem #94935D;
-          border-radius: 1rem; }
-        .main__contacto .contacto_info .contacto_form form #boton {
-          font-size: 3rem;
-          background-color: #459F92;
-          font-family: "Oswald", sans-serif;
-          border: 0.8rem solid #459F92;
-          color: aliceblue; }
-          .main__contacto .contacto_info .contacto_form form #boton:active {
-            background-color: aliceblue;
-            color: #459F92; }
   .main__contacto .contacto_maps {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 5rem;
-    margin-top: 3rem; }
+    justify-content: center; }
     .main__contacto .contacto_maps .map {
-      box-shadow: 0px 0px 16px 9px black;
-      -webkit-box-shadow: 0px 0px 16px 9px black;
-      -moz-box-shadow: 0px 0px 16px 9px black; }
+      min-height: 40rem;
+      border-radius: 3rem;
+      box-shadow: 0 0 15px #1D1C0D; }
 
 /*RESPONSIVE*/
 @media (min-width: 992px) {
@@ -475,7 +437,7 @@ footer {
     border: none;
     margin-right: 1rem; }
     .main__contacto .contacto_info .contacto_text .link a {
-      transition: transform 600ms; }
+      transition: all 600ms; }
       .main__contacto .contacto_info .contacto_text .link a:hover {
         color: #F2FF00;
         transform: scale(1.5, 1.5); }
