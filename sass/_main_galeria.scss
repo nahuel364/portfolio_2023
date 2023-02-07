@@ -1,14 +1,26 @@
 .main__galeria{
     background-image: url(../assets/img/fondo_galeriab.jpg);
     padding: 5rem;
-    padding-top: 10rem;
+    padding-top: 50%;
     color: map-get($map:$colores-pagina , $key:principal );
     .section__galeria{
         h1{
          @include h1_paginas;
+         letter-spacing: 5px; 
         }
         p{
             @include p_paginas;
+            font-weight: 600;
+            a{
+                img{
+                    animation-name: insta;
+                    animation-duration: 2s;
+                    animation-iteration-count:infinite;
+                }
+            }
+        }
+        iframe{
+            width: 25rem;
         }
     }
 }
@@ -17,8 +29,24 @@
 
 @media(min-width:768px){
     .main__galeria{
+        padding-top: 10%;
         .section__galeria{
+            p{
+                a{
+                    img{
+                        transition: all 600ms;
+                        &:hover{
+                            transform:scale(1.5,1.5);
+                        }
+                    }
+                }
+            }
             .hover_img{
+                iframe{
+                    width:60rem;
+                    height: 30rem;
+                    border:solid 1rem black;
+                }
                 img{
                     transition:all 1s;
                     &:hover{

@@ -1,6 +1,6 @@
 .main__contacto{
     min-height: 80rem;
-    background-image: url(../assets/img/f_prueba4.svg);
+    background-image: url(../assets/img/f_sliderb.jpg);
     background-size: cover;
     .main_contacto_h2{
         min-height: 20rem;
@@ -10,11 +10,11 @@
         background-attachment: fixed;
         margin-bottom: 1%;
         h2{
-            width: 30%;
+            width: 90%;
             font-family:$tipografia-titulos;
-            font-weight: 400;
+            font-weight: 500;
             text-align: center;
-            font-size: 4rem;
+            font-size: 3rem;
             @include texto-mayus;
             color: map-get($map:$colores-pagina , $key:titulos );
             text-shadow: 5px 0px 1px #1D1C0D;
@@ -22,24 +22,18 @@
             }
     }
     .contacto_info{
-        padding: 5rem;
+        padding: 1.5rem;
         .contacto_text{
             min-height: 40rem;
-            padding-top:3rem;
-            h3{
-                text-align: center;
-                font-size: 3rem;
-                font-weight: bold;
-                padding-bottom: 2rem;
-                font-family:$tipografia-titulos;
-                color: map-get($map:$colores-pagina , $key:principal);
-                @include texto-mayus;
-                letter-spacing: 5px; 
-            }
+            padding-top:1rem;
+            border: #1D1C0D solid 0.3rem;
+            margin-bottom: 2rem;
             p{
                 @include p_paginas;
                 color: map-get($map:$colores-pagina, $key:principal);
-                padding: 0 3rem;
+                text-align: start;
+                font-weight: 600;
+                padding: 1rem;
             }
             .link{
                 a{
@@ -69,7 +63,7 @@
                         font-size: 2rem;
                         color:map-get($map:$colores-pagina , $key:principal);
                         order: 2;
-                        letter-spacing: 2px;
+                        letter-spacing:1px;
                     }
                     a{
                         transition: $hover-scale;
@@ -86,7 +80,7 @@
         align-items: center;
         justify-content: center;
         .map{
-            min-height: 40rem;
+            min-height: 30rem;
             border-radius: 3rem;
             box-shadow: 0 0 15px #1D1C0D;
         }
@@ -97,34 +91,27 @@
 
 @media (min-width:992px){
     .main__contacto{
-        .contacto_info{
-            .contacto_text{
-                border: none;
-                margin-right: 1rem;
-                .link{
-                    a{
-                        transition: $hover-scale;
-                        &:hover{
-                                @include estilos_hover;
-                            } 
-                        }
-                    }
+        .main_contacto_h2{
+                h2{
+                    width: 30%;
+                    font-size: 5rem;
                 }
-                .contacto_form{
-                    border: none;
-                    form{
-                        border: solid 0.5rem aliceblue;
-                        padding: 2rem;
-                        #boton{
-                            transition: all 400ms;
+            }
+            .contacto_info{
+                .contacto_text{
+                    p{
+                        text-align: center;
+                        font-size: 2.5rem;
+                    }
+                    .link{
+                        a{
+                            transition: $hover-scale;
                             &:hover{
-                                background-color: aliceblue;  
-                                color: #459F92;
+                                    @include estilos_hover;
+                                } 
                             }
                         }
                     }
-                }
+                } 
             }
-            
         }
-    }

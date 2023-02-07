@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="keywords" content="portfolio, curriculum, vitae, sobre mi">
-    <meta name="description" content="Aquí podrás conocer mis experiencia en la fotografía y un poco más sobre mis conocimientos, también podrás descargar mi cv para una futura postulación.">
+    <meta name="keywords" content="portfolio, fotografía, galeria, fotos, paisajes">
+    <meta name="description" content="Muestra de mis trabajos como fotógrafo de paisaje, donde demuestro mis conocimientos de encuadre y posproducción.">
     <!-- link_bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- estilos_css -->
     <link rel="stylesheet" href="../css/estilos.css">
+    <!--estilos_aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Slab&display=swap" rel="stylesheet">
-    
     <!-- iconos -->
     <script src="https://kit.fontawesome.com/1ac63a5379.js" crossorigin="anonymous"></script>
     <!-- icono_pagina -->
     <link rel="icon" href="../assets/img/favicon.ico">
-    <title>Veliz_Nahuel-cv</title>
+    <title>Veliz_Nahuel-paisajes</title>
 </head>
 
 <body>
@@ -34,14 +35,13 @@
                     <a href="https://www.instagram.com/nveliz36/"target="blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.behance.net/"target="blank"><i class="fa-brands fa-square-behance"></i></a>
                     <a href="https://wa.me/1159347414"target="blank"><i id="what" class="fa-brands fa-square-whatsapp"></i></a>
-                    <img></img>
                 </div>
               </div>
               <div class="col-sm-6 col-lg-4 offset-md-1 py-4 nav_interior_menu">
                 <ul class="list-unstyled">
                   <li><a href="../index.html" class=""><i class="fa-solid fa-house icon_menu"></i>INICIO</a></li>
                   <li><a href="../index.html#portfolio" class=""><i class="fa-solid fa-briefcase  icon_menu"></i>PORTFOLIO</a></li>
-                  <li><a href="./contacto.html" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
+                  <li><a href="../index.html#contacto" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
                 </ul>
               </div>
             </div>
@@ -51,16 +51,16 @@
         <div class="navbar navbar-dark nav_exterior shadow-sm">
           <div class="container">
             <a href="../index.html" class="navbar-brand d-flex align-items-center">
-                <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
-                <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
-                <lord-icon
-                    src="https://cdn.lordicon.com/hbvyhtse.json"
-                    trigger="loop"
-                    delay="2000"
-                    colors="primary:#ffffff"
-                    style="width:50px;height:50px">
-                </lord-icon>
-              <strong>NAHUEL VELIZ</strong>
+              <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+              <lord-icon class="icon"
+                  src="https://cdn.lordicon.com/vixtkkbk.json"
+                  trigger="loop"
+                  delay="2000"
+                  colors="primary:#ffffff,secondary:#e8e230">
+                  <!-- style="width:70px;height:70px"> -->
+              </lord-icon>
+              <h1>NAHUEL VELIZ</h1>
+              <span>PORTFOLIO</span>
             </a>
             <button class="navbar-toggler bton_menur" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "></span>
@@ -68,30 +68,52 @@
           </div>
         </div>
       </header>
-    <main class="main__cv">
-        <section class="section__cv">
-            <h1 class="text-center">cv</h1>
-        <div class="d-flex flex-md-row flex-column ">   
-            <div class="col-md-6 col-sm-12 d-flex flex-column align-items-center">
-              <p>Me apasiona la fotografía retrato, tanto como exterior o estudio, sin dejar de lado otras áreas como la fotografía de paisaje y urbanas. Me considero una persona que se encuentra en constante aprendizaje, ya sea por cuenta propia o por medios de cursos.</p>
-
-              <p>No solo me apasiona la fotografía sino la posproducción de la misma, me capacito constantemente con la herramienta  Photoshop. Tengo un gran interés por seguir aprendiendo en otras áreas, como la fotografía en estudio, productos y recién nacidos.</p>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-center col-md-6">
-              <img src="../assets/img/perfil.JPG" alt="imagen-perfil">
-            </div>
-        </div>   
-            <div class="bton_descargar">
-                <a download="cv" href="../assets/img/CV_2O22.jpg" target="_blank"><h3>descargar cv</h3></a>
+    <main class="d-flex flex-column align-items-center main__galeria">
+        <section class="section__galeria d-flex flex-column align-items-center">
+          <div class="text-center"data-aos="fade-down"data-aos-duration="1000">
+            <h1>paisajes</h1>
+          </div>
+            <div class="row flex-column justify-content-center align-items-center hover_img"data-aos="fade-up"data-aos-duration="1000">
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/1b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/2b.jpg" alt="img-retrato"loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/3b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/4b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/5b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/6b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/7b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/8b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/9b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-10 mb-4">
+                    <img src="../assets/img/paisajes/10b.jpg" alt="img-retrato" loading="lazy">
+                </div>
+                
             </div>
         </section>
+    
     </main>
     <footer>
         <section class="footer__nav">
                 <a href="../index.html">INICIO</a>
                 <a href="../index.html#portfolio">PORTFOLIO</a>
-                <a href="./contacto.html">CONTACTO</a>
+                <a href="../index.html#contacto">CONTACTO</a>
         </section>
 
         <section class="footer__redes">
@@ -101,10 +123,15 @@
         </section>    
 
         <section class="footer__section__1">
-            <p>todos los derechos reservados -  nahuel_veliz_2022</p>
+            <p>todos los derechos reservados -  nahuel_veliz_2023</p>
         </section>
         
     </footer>
     <!-- js_bootstrap -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--js_aos-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>

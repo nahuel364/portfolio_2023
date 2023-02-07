@@ -22,25 +22,34 @@ header {
   header .nav_exterior {
     background-color: #1D1C0D; }
     header .nav_exterior a {
-      font-size: 3rem;
+      font-size: 1rem;
       font-family: "Oswald", sans-serif;
       color: aliceblue; }
+      header .nav_exterior a .icon {
+        width: 50px;
+        height: 50px; }
       header .nav_exterior a h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0 1rem;
         border-right: solid aliceblue; }
       header .nav_exterior a span {
         font-family: "Roboto Slab", serif;
-        padding-left: 1rem;
-        font-size: 2rem; }
+        padding: 0 1rem;
+        font-size: 1.5rem; }
     header .nav_exterior .bton_menur {
       border: solid 0.5rem #94935D;
-      font-size: 2rem; }
+      font-size: 1rem;
+      margin: 0 auto; }
   header .nav_interior {
     background-image: url(../assets/img/f_menu_interior2.svg); }
     header .nav_interior .redes {
+      width: fit-content;
+      height: 50%;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      border: solid 0.3rem #F2FF00;
+      border-radius: 10rem;
+      background-color: rgba(29, 28, 13, 0.8); }
       header .nav_interior .redes #what {
         color: #25D366; }
       header .nav_interior .redes a {
@@ -67,7 +76,28 @@ header {
     font-size: 2.5rem; }
 
 /*RESPONSIVE*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  header .nav_exterior {
+    background-color: #1D1C0D; }
+    header .nav_exterior a {
+      font-family: "Oswald", sans-serif;
+      color: aliceblue; }
+      header .nav_exterior a .icon {
+        width: 100px;
+        height: 100px; }
+      header .nav_exterior a h1 {
+        font-size: 3rem;
+        padding: 0 1rem;
+        border-right: solid aliceblue; }
+      header .nav_exterior a span {
+        font-family: "Roboto Slab", serif;
+        padding: 0 1rem;
+        font-size: 2rem; }
+    header .nav_exterior .bton_menur {
+      border: solid 0.3rem;
+      color: #F2FF00;
+      font-size: 2rem;
+      margin-left: 45%; }
   header .nav_interior .redes a:hover {
     color: #F2FF00;
     transform: scale(1.5, 1.5); }
@@ -77,24 +107,21 @@ header {
 /* ESTILOS SLIDER */
 .cont_slider {
   height: 60%;
-  background-image: url(../assets/img/f_prueba4.svg);
+  background-image: url(../assets/img/f_sliderb.jpg);
   background-size: cover;
   background-attachment: fixed; }
-  .cont_slider .filtro {
-    padding-top: 5rem;
-    height: 100%; }
-    .cont_slider .filtro .slider {
-      width: 80%;
-      padding-top: 5rem;
-      padding-bottom: 5rem; }
-      .cont_slider .filtro .slider .carousel-item {
-        height: 50%; }
-        .cont_slider .filtro .slider .carousel-item img {
-          object-fit: contain; }
+  .cont_slider .slider {
+    width: 80%;
+    padding-top: 12rem;
+    padding-bottom: 2rem; }
+    .cont_slider .slider .carousel-item {
+      height: 50%; }
+      .cont_slider .slider .carousel-item img {
+        object-fit: contain; }
 
 /* SECCION SOBRE MI */
 .sobre__mi {
-  min-height: 80rem;
+  min-height: 100rem;
   background-image: url(../assets/img/f_sliderb.jpg);
   background-size: cover; }
   .sobre__mi .sobre_mi_h2 {
@@ -102,47 +129,72 @@ header {
     background-image: url(../assets/img/f_sobremi.jpg);
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 10%; }
+    margin-bottom: 5%; }
     .sobre__mi .sobre_mi_h2 h2 {
-      width: 30%;
+      width: 90%;
       font-family: "Oswald", sans-serif;
-      font-weight: 400;
+      font-weight: 500;
       text-align: center;
-      font-size: 4rem;
+      font-size: 3rem;
       text-transform: uppercase;
       letter-spacing: 15px;
       color: aliceblue;
       text-shadow: 5px 0px 1px #1D1C0D;
       border: aliceblue solid 0.5rem; }
   .sobre__mi .img_yo {
+    height: 20rem;
     border-radius: 100px 0px 100px 0px;
     background-image: url(../assets/img/yo_c.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
-    margin-right: 3rem; }
+    margin-bottom: 5%; }
   .sobre__mi .sobre_mi_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     min-height: 50%;
-    padding-bottom: 1rem;
-    border: #1D1C0D solid 0.5rem; }
+    padding: 2rem;
+    margin-bottom: 5%;
+    border: #1D1C0D solid 0.3rem; }
     .sobre__mi .sobre_mi_text p {
       font-family: "Roboto Slab", serif;
       font-weight: 600;
       color: #1D1C0D;
       font-size: 2rem;
-      padding: 1rem; }
+      text-align: start; }
+      .sobre__mi .sobre_mi_text p i {
+        color: #1D1C0D;
+        font-size: 4rem;
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        margin-left: 1rem;
+        transition: transform 600ms;
+        animation-name: insta;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
+
+@keyframes insta {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }
+        .sobre__mi .sobre_mi_text p i:hover {
+          transform: scale(1.5, 1.5); }
 
 /* SECCION PORTFOLIO */
 #portfolio {
-  min-height: 80rem;
-  background-image: url(../assets/img/fondo_port.svg);
-  background-size: cover; }
+  min-height: 70rem;
+  background-image: url(../assets/img/f_sliderb.jpg);
+  background-size: cover;
+  padding-bottom: 5%;
+  overflow: hidden; }
   #portfolio .portfolio_h2 {
     min-height: 20rem;
     background-image: url(../assets/img/fondo_port.JPG);
@@ -151,11 +203,11 @@ header {
     background-attachment: fixed;
     margin-bottom: 1%; }
     #portfolio .portfolio_h2 h2 {
-      width: 30%;
+      width: 90%;
       font-family: "Oswald", sans-serif;
-      font-weight: 400;
+      font-weight: 500;
       text-align: center;
-      font-size: 4rem;
+      font-size: 3rem;
       text-transform: uppercase;
       letter-spacing: 15px;
       color: aliceblue;
@@ -167,24 +219,43 @@ header {
     filter: contrast(100%); }
   #portfolio .porfolio_card a img {
     border-radius: 1rem;
-    filter: contrast(50%);
-    transition: all 600ms; }
-  #portfolio .porfolio_card a .text {
-    font-size: 1.5rem; }
-    #portfolio .porfolio_card a .text h3 {
-      width: 30%;
-      border: aliceblue solid 0.3rem;
-      text-align: center;
-      font-size: 3rem;
-      text-transform: uppercase; }
+    box-shadow: 5px 5px 3px #1D1C0D; }
+  #portfolio .porfolio_card a h3 {
+    width: 50%;
+    border: aliceblue solid 0.3rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase; }
 
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
   .cont_slider {
     height: 100vh;
     margin-top: 3rem; }
-  #portfolio .porfolio_card .text a:hover {
-    background-color: aliceblue;
-    color: #459F92; } }
+  #portfolio .portfolio_h2 h2 {
+    width: 30%;
+    font-size: 5rem; }
+  #portfolio .porfolio_card a:hover img {
+    filter: contrast(100%); }
+  #portfolio .porfolio_card a img {
+    filter: contrast(50%);
+    transition: all 600ms; }
+  #portfolio .porfolio_card a h3 {
+    width: 30%;
+    border: aliceblue solid 0.3rem;
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-top: 25%; }
+  .sobre__mi .sobre_mi_h2 {
+    margin-bottom: 1%; }
+    .sobre__mi .sobre_mi_h2 h2 {
+      width: 30%;
+      font-size: 5rem; }
+  .sobre__mi .img_yo {
+    height: 40rem;
+    box-shadow: 5px 5px 15px #1D1C0D; }
+  .sobre__mi .sobre_mi_text p {
+    font-size: 2.5rem; } }
 
 footer {
   background-color: black;
@@ -249,7 +320,7 @@ footer {
 .main__galeria {
   background-image: url(../assets/img/fondo_galeriab.jpg);
   padding: 5rem;
-  padding-top: 10rem;
+  padding-top: 50%;
   color: #1D1C0D; }
   .main__galeria .section__galeria h1 {
     width: 90vw;
@@ -259,100 +330,41 @@ footer {
     margin-bottom: 5rem;
     padding: 1rem;
     font-family: "Oswald", sans-serif;
-    border: #1D1C0D solid 0.5rem; }
+    border: #1D1C0D solid 0.5rem;
+    letter-spacing: 5px; }
   .main__galeria .section__galeria p {
     font-size: 2rem;
-    margin-bottom: 50px;
-    font-family: "Roboto Slab", serif; }
+    letter-spacing: 3px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 600; }
+    .main__galeria .section__galeria p a img {
+      animation-name: insta;
+      animation-duration: 2s;
+      animation-iteration-count: infinite; }
+  .main__galeria .section__galeria iframe {
+    width: 25rem; }
 
 /*RESPONSIVE*/
 @media (min-width: 768px) {
-  .main__galeria .section__galeria .hover_img img {
-    transition: all 1s; }
-    .main__galeria .section__galeria .hover_img img:hover {
-      transform: scale(1.5, 1.5);
-      cursor: pointer; } }
-
-.main__video {
-  background-image: url(../assets/img/fondo_galeriab.jpg);
-  color: #1D1C0D;
-  padding: 5rem;
-  padding-top: 10rem; }
-  .main__video .section__videos h1 {
-    width: 90vw;
-    font-size: 500%;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    margin-bottom: 5rem;
-    padding: 1rem;
-    font-family: "Oswald", sans-serif;
-    border: #1D1C0D solid 0.5rem; }
-  .main__video .section__videos p {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    font-family: "Roboto Slab", serif; }
-  .main__video .video iframe {
-    width: 90vw;
-    height: 300px; }
-
-/*RESPONSIVE*/
-@media (min-width: 768px) {
-  .main__video .video iframe {
-    width: 50vw; } }
-
-.main__cv {
-  background-image: url(../assets/img/denim.webp);
-  color: aliceblue;
-  padding-top: 5rem; }
-  .main__cv .section__cv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem; }
-    .main__cv .section__cv h1 {
-      width: 90vw;
-      font-size: 500%;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      margin-bottom: 5rem;
-      padding: 1rem;
-      font-family: "Oswald", sans-serif;
-      border: #1D1C0D solid 0.5rem;
-      border-color: aliceblue;
-      margin-bottom: 10rem; }
-    .main__cv .section__cv p {
-      font-size: 2rem;
-      margin-bottom: 50px;
-      font-family: "Roboto Slab", serif; }
-    .main__cv .section__cv img {
-      width: 90%;
-      border-left: aliceblue solid 0.5rem;
-      border-top: aliceblue solid 0.5rem;
-      box-shadow: 3rem 3rem 1px rgba(0, 0, 0, 0.8); }
-    .main__cv .section__cv .bton_descargar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 20rem;
-      height: 4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5rem;
-      margin-top: 10rem;
-      background-color: #F2FF00;
+  .main__galeria {
+    padding-top: 10%; }
+    .main__galeria .section__galeria p a img {
       transition: all 600ms; }
-      .main__cv .section__cv .bton_descargar a {
-        text-decoration: none;
-        color: #1D1C0D;
-        font-family: "Oswald", sans-serif; }
-      .main__cv .section__cv .bton_descargar:hover {
-        transform: scale(1.2, 1.2);
-        cursor: pointer;
-        box-shadow: 1rem 1rem 1px rgba(0, 0, 0, 0.8); }
+      .main__galeria .section__galeria p a img:hover {
+        transform: scale(1.5, 1.5); }
+    .main__galeria .section__galeria .hover_img iframe {
+      width: 60rem;
+      height: 30rem;
+      border: solid 1rem black; }
+    .main__galeria .section__galeria .hover_img img {
+      transition: all 1s; }
+      .main__galeria .section__galeria .hover_img img:hover {
+        transform: scale(1.5, 1.5);
+        cursor: pointer; } }
 
 .main__contacto {
   min-height: 80rem;
-  background-image: url(../assets/img/f_prueba4.svg);
+  background-image: url(../assets/img/f_sliderb.jpg);
   background-size: cover; }
   .main__contacto .main_contacto_h2 {
     min-height: 20rem;
@@ -362,37 +374,31 @@ footer {
     background-attachment: fixed;
     margin-bottom: 1%; }
     .main__contacto .main_contacto_h2 h2 {
-      width: 30%;
+      width: 90%;
       font-family: "Oswald", sans-serif;
-      font-weight: 400;
+      font-weight: 500;
       text-align: center;
-      font-size: 4rem;
+      font-size: 3rem;
       text-transform: uppercase;
       letter-spacing: 15px;
       color: aliceblue;
       text-shadow: 5px 0px 1px #1D1C0D;
       border: aliceblue solid 0.5rem; }
   .main__contacto .contacto_info {
-    padding: 5rem; }
+    padding: 1.5rem; }
     .main__contacto .contacto_info .contacto_text {
       min-height: 40rem;
-      padding-top: 3rem; }
-      .main__contacto .contacto_info .contacto_text h3 {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: bold;
-        padding-bottom: 2rem;
-        font-family: "Oswald", sans-serif;
-        color: #1D1C0D;
-        text-transform: uppercase;
-        letter-spacing: 15px;
-        letter-spacing: 5px; }
+      padding-top: 1rem;
+      border: #1D1C0D solid 0.3rem;
+      margin-bottom: 2rem; }
       .main__contacto .contacto_info .contacto_text p {
         font-size: 2rem;
-        margin-bottom: 50px;
+        letter-spacing: 3px;
         font-family: "Roboto Slab", serif;
         color: #1D1C0D;
-        padding: 0 3rem; }
+        text-align: start;
+        font-weight: 600;
+        padding: 1rem; }
       .main__contacto .contacto_info .contacto_text .link a {
         font-size: 5rem;
         color: #1D1C0D; }
@@ -416,7 +422,7 @@ footer {
           font-size: 2rem;
           color: #1D1C0D;
           order: 2;
-          letter-spacing: 2px; }
+          letter-spacing: 1px; }
         .main__contacto .contacto_info .contacto_text .link .link_email a {
           transition: all 600ms; }
           .main__contacto .contacto_info .contacto_text .link .link_email a:active {
@@ -427,70 +433,20 @@ footer {
     align-items: center;
     justify-content: center; }
     .main__contacto .contacto_maps .map {
-      min-height: 40rem;
+      min-height: 30rem;
       border-radius: 3rem;
       box-shadow: 0 0 15px #1D1C0D; }
 
 /*RESPONSIVE*/
 @media (min-width: 992px) {
-  .main__contacto .contacto_info .contacto_text {
-    border: none;
-    margin-right: 1rem; }
-    .main__contacto .contacto_info .contacto_text .link a {
-      transition: all 600ms; }
-      .main__contacto .contacto_info .contacto_text .link a:hover {
-        color: #F2FF00;
-        transform: scale(1.5, 1.5); }
-  .main__contacto .contacto_info .contacto_form {
-    border: none; }
-    .main__contacto .contacto_info .contacto_form form {
-      border: solid 0.5rem aliceblue;
-      padding: 2rem; }
-      .main__contacto .contacto_info .contacto_form form #boton {
-        transition: all 400ms; }
-        .main__contacto .contacto_info .contacto_form form #boton:hover {
-          background-color: aliceblue;
-          color: #459F92; } }
-
-.body_404 {
-  background-image: url(../assets/img/fondo_404.JPG);
-  background-size: cover;
-  background-position: bottom;
-  height: 100vh; }
-  .body_404 .main_404 p {
-    background-color: black;
-    font-size: 2rem;
-    margin-bottom: 50px;
-    font-family: "Roboto Slab", serif;
-    color: aliceblue;
-    font-size: 2rem;
-    margin-bottom: 30rem; }
-  .body_404 .main_404 div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .body_404 .main_404 div a {
-      text-decoration: none;
-      text-align: center;
-      letter-spacing: 10px; }
-      .body_404 .main_404 div a .bton_volver {
-        padding: 1rem;
-        width: fit-content;
-        height: 4rem;
-        background-color: #459F92;
-        font-family: "Oswald", sans-serif;
-        border: 0.3rem solid #459F92;
-        color: aliceblue;
-        border-radius: 1rem;
-        transition: all 400ms; }
-        .body_404 .main_404 div a .bton_volver:hover {
-          background-color: aliceblue;
-          color: #459F92; }
-
-/*RESPONSIVE*/
-@media (min-width: 768px) {
-  .body_404 {
-    background-position: center; }
-    .body_404 .main_404 p {
-      margin-bottom: 35rem; } }
+  .main__contacto .main_contacto_h2 h2 {
+    width: 30%;
+    font-size: 5rem; }
+  .main__contacto .contacto_info .contacto_text p {
+    text-align: center;
+    font-size: 2.5rem; }
+  .main__contacto .contacto_info .contacto_text .link a {
+    transition: all 600ms; }
+    .main__contacto .contacto_info .contacto_text .link a:hover {
+      color: #F2FF00;
+      transform: scale(1.5, 1.5); } }

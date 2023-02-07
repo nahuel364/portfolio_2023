@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="keywords" content="portfolio, fotografía, diseño, visual">
-    <meta name="description" content="Bienvenido a mi portfolio, en el encontraras muestras de mi trabajo como fotografo y sus distintas areas">
+    <meta name="keywords" content="portfolio, fotografía, diseño, visual,edición de video">
+    <meta name="description" content="Bienvenido a mi portfolio, en el encontraras muestras de mi trabajo como fotografo y editor de video.">
     <!-- link_bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- estilos_css -->
     <link rel="stylesheet" href="./css/estilos.css">
+    <!--estilos_aos-->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +42,7 @@
                     <ul class="list-unstyled">
                       <li><a href="./index.html" class=""><i class="fa-solid fa-house icon_menu"></i>INICIO</a></li>
                       <li><a href="#portfolio" class=""><i class="fa-solid fa-briefcase  icon_menu"></i>PORTFOLIO</a></li>
-                      <li><a href="./pages/contacto.html" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
+                      <li><a href="#contacto" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
                     </ul>
                   </div>
                 </div>
@@ -51,12 +53,12 @@
               <div class="container">
                 <a href="./index.html" class="navbar-brand d-flex align-items-center">
                   <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
-                  <lord-icon
+                  <lord-icon class="icon"
                       src="https://cdn.lordicon.com/vixtkkbk.json"
                       trigger="loop"
                       delay="2000"
-                      colors="primary:#ffffff,secondary:#e8e230"
-                      style="width:70px;height:70px">
+                      colors="primary:#ffffff,secondary:#e8e230">
+                      <!--style="width:0px;height:0px"-->
                   </lord-icon>
                   <h1>NAHUEL VELIZ</h1>
                   <span>PORTFOLIO</span>
@@ -70,9 +72,8 @@
   
     <!-- slider -->
             
-    <div id="anclainicio" class="cont_slider">
-    <div class="filtro">   
-    <div class="container-fluid slider">
+    <div id="anclainicio" class="cont_slider">   
+    <div class="container-fluid slider"data-aos=""data-aos-duration="1000">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"data-bs-interval="2000">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -99,7 +100,6 @@
           </div>
     </div>
     </div>
-    </div>
 
     <main>
 
@@ -110,35 +110,50 @@
                 
             <div class="container-xl d-flex flex-column  justify-content-center align-items-center">
 
-                <div class="col-10 col-xl-7 m-3 porfolio_card">
-                    
-                      <a href="./pages/galeria.html">
+                <div class="col-10 col-xl-7 m-3 porfolio_card" data-aos="fade-right"data-aos-duration="1000">
+                      <a href="./pages/retratos.html">
                         <div class="card  text-white">
                         <img src="./assets/img/retratos/9b.jpg" class="card-img" alt="...">
-                          <div class="d-flex flex-column justify-content-center card-img-overlay text">
+                          <div class="d-flex flex-column justify-content-start card-img-overlay">
                             <h3 class="card-title">Retratos</h3>
                           </div>
-                      </div></a>
+                      </div>
+                    </a>
                 </div>
 
-                    <div class="col-10 col-xl-7 m-3 porfolio_card">
+                    <div class="col-10 col-xl-7 m-3 porfolio_card"data-aos="fade-left"data-aos-duration="1000">
                     
-                      <a href="./pages/galeria.html" class="">
+                      <a href="./pages/paisajes.html" class="">
                         <div class="card text-white">
-                        <img src="./assets/img/f_p_pasiaje.jpg" class="card-img" alt="...">
-                          <div class="d-flex flex-column justify-content-center card-img-overlay text">
+                        <img src="./assets/img/f_p_paisaje.jpg" class="card-img" alt="...">
+                          <div class="d-flex flex-column justify-content-start card-img-overlay">
                             <h3 class="card-title">Paisajes</h3>
                           </div>
                       </div></a>
                     </div>
 
-                    <div class="col-10 col-xl-7 m-3 porfolio_card">
+                    <div class="col-10 col-xl-7 m-3 porfolio_card"data-aos="fade-right"data-aos-duration="1000">
                     
-                      <a href="./pages/galeria.html" class="">
+                      <a href="./pages/urbanas.html" class="">
                         <div class="card  text-white">
                         <img src="./assets/img/f_contacto.jpg" class="card-img" alt="...">
-                          <div class="d-flex flex-column justify-content-center card-img-overlay text">
+                          <div class="d-flex flex-column
+                          justify-content-start
+                          card-img-overlay">
                             <h3 class="card-title">Urbanas</h3>
+                          </div>
+                      </div></a>
+                    </div>
+
+                    <div class="col-10 col-xl-7 m-3 porfolio_card"data-aos="fade-left"data-aos-duration="1000">
+                    
+                      <a href="./pages/videos.html" class="">
+                        <div class="card  text-white">
+                        <img src="./assets/img/video_1.jpg" class="card-img" alt="...">
+                          <div class="d-flex flex-column
+                          justify-content-start
+                          card-img-overlay">
+                            <h3 class="card-title">Edición de video</h3>
                           </div>
                       </div></a>
                     </div>
@@ -152,21 +167,28 @@
             <h2>sobre mi</h2>
           </div>
             
-            <div class="d-flex flex-row align-content-center justify-content-center">
-              <div class="img_yo col-md-4">
+            <div class="d-flex flex-column  justify-content-center align-items-center">
+              <div class="col-10 col-xl-4 m-5 img_yo"data-aos="fade-up"data-aos-duration="1000">
               </div>
-              <div class="col-md-7 col-9 sobre_mi_text">
-                  <p>¡Hola!, gracias por el interés en mi portfolio,<br> en ella encontraras muestra de mi trabajo como fotógrafo
+              <div class="col-10 col-xl-6 sobre_mi_text"data-aos="fade-down"data-aos-duration="1000">
+                  <p>¡Hola!, gracias por su interés en mi portfolio, en él encontrarás muestra de mi trabajo como fotógrafo y editor de video.
                   <br><br>
-                  Cuento con conocimientos en posproducción y corrección de color de las mismas.<br>
-                  Actualmente  me encuentro aprendiendo sobre el diseño y desarrollo web con el cual cree mi propio portfolio.<br><br>
-                  Si te gustaría saber más sobre mi formación y experiencia no dudes en descargar mi cv. 
-                  </p>
-                  <div>
-                      <img width="50px" height="50px" src="./assets/img/photoshop.png">
-                      <img width="50px" height="50px" src="./assets/img/illustrator (1).png">
-                      <img width="50px"height="50px" src="./assets/img/experience.png">
-                  </div> 
+                  Tengo conocimientos de software para diseño, ilustración, edición de fotografías y post-producción de video.<br></p>
+                <div>
+                    <img width="50px" height="50px" src="./assets/img/photoshop.png">
+                    <img width="50px" height="50px" src="./assets/img/illustrator (1).png">
+                    <img width="50px"height="50px" src="./assets/img/premier.png">
+                </div>
+                  <p><br>Actualmente me encuentro aprendiendo sobre diseño y desarrollo web con lo cual realicé mi propio portfolio.</p>
+                <div>
+                    <img width="50px" height="50px" src="./assets/img/html-file-extension-interface-symbol.png">
+                    <img width="50px" height="50px" src="./assets/img/css-file-format-symbol.png">
+                    <img width="50px"height="50px" src="./assets/img/bootstrap-01-01.png">
+                </div>  
+                  <br><br>
+                  <p>Si quieres ver más de mi trabajo, no dudes en visitarme y seguirme en instagram.
+                  <a href="https://www.instagram.com/nveliz36/"target="blank"><i class="fa-brands fa-instagram"></i></a> 
+                  </p> 
               </div>
 
             </div>
@@ -174,19 +196,18 @@
         
         <section class="main__contacto">
           <div class="main_contacto_h2 text-center d-flex align-items-center justify-content-center">
-            <h2>contacto</h2>
+            <h2 id="contacto">contacto</h2>
           </div>
-        <div class="d-flex align-items-center justify-content-center contacto_info ">
-                <div class="col-lg-6 col-12 contacto_text text-center">
-                  <h3>consultame</h3>
-                  <p>Gracias por el interés en mi trabajo, podes contactarme con los siguientes enlaces que te brindo más abajo.</p>
+        <div class="d-flex align-items-center justify-content-center contacto_info flex-column">
+                <div class="col-xl-6 col-12 contacto_text text-center"data-aos="fade-up"data-aos-duration="1000">
+                  <p>Gracias por tu interés en mi trabajo. Puedes contactarme a través de los siguientes enlaces a continuación.</p>
                   <div class="d-flex flex-column align-items-center link">
                     <div class="d-flex flex-column link_wassap">
                       <h4>11-5934-7414</h4>
                     <a href=" https://wa.me/1159347414" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
                   </div>
 
-                  <div class="d-flex flex-column link_email">
+                  <div class="d-flex flex-column link_email mb-4">
                     <h4>Nahuel_Veliz@hotmail.com</h4>
                     <a href="mailto:nahuel_veliz@hotmail.com" target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
                   </div>
@@ -194,23 +215,19 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-12  contacto_maps"> 
+                <div class="col-xl-10 col-12  contacto_maps"> 
                   <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13122.072150380802!2d-58.76283288471681!3d-34.69211161232533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc004497ba6df%3A0x57781ea8ef1de90!2sParque%20San%20Mart%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1666733938332!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
           </div> 
         </section>
     </main>
 
-     
-
-          
-
     <footer>
     
         <section class="footer__nav">
                 <a href="#anclainicio">INICIO</a>
                 <a href="#portfolio">PORTFOLIO</a>
-                <a href="./pages/contacto.html">CONTACTO</a>
+                <a href="#contacto">CONTACTO</a>
         </section>
     
         <section class="footer__redes">
@@ -220,15 +237,17 @@
         </section>    
 
         <section class="footer__section__1">
-            <p>todos los derechos reservados -  nahuel_veliz_2022</p>
+            <p>todos los derechos reservados -  nahuel_veliz_2023</p>
         </section>
         
     </footer>
 
     <!-- js_bootstrap -->
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script>
-      alert("hola");
-    </script>
+    <!--js_aos-->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+      AOS.init();
+      </script>
 </body>
 </html>

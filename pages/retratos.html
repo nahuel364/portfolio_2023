@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- estilos_css -->
     <link rel="stylesheet" href="../css/estilos.css">
+    <!--estilos_aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +21,7 @@
     <script src="https://kit.fontawesome.com/1ac63a5379.js" crossorigin="anonymous"></script>
     <!-- icono_pagina -->
     <link rel="icon" href="../assets/img/favicon.ico">
-    <title>Veliz_Nahuel-galeria</title>
+    <title>Veliz_Nahuel-retratos</title>
 </head>
 
 <body>
@@ -33,14 +35,13 @@
                     <a href="https://www.instagram.com/nveliz36/"target="blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.behance.net/"target="blank"><i class="fa-brands fa-square-behance"></i></a>
                     <a href="https://wa.me/1159347414"target="blank"><i id="what" class="fa-brands fa-square-whatsapp"></i></a>
-                    <img></img>
                 </div>
               </div>
               <div class="col-sm-6 col-lg-4 offset-md-1 py-4 nav_interior_menu">
                 <ul class="list-unstyled">
                   <li><a href="../index.html" class=""><i class="fa-solid fa-house icon_menu"></i>INICIO</a></li>
                   <li><a href="../index.html#portfolio" class=""><i class="fa-solid fa-briefcase  icon_menu"></i>PORTFOLIO</a></li>
-                  <li><a href="./contacto.html" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
+                  <li><a href="../index.html#contacto" class=""><i class="fa-solid fa-address-book  icon_menu"></i>CONTACTO</a></li>
                 </ul>
               </div>
             </div>
@@ -50,16 +51,16 @@
         <div class="navbar navbar-dark nav_exterior shadow-sm">
           <div class="container">
             <a href="../index.html" class="navbar-brand d-flex align-items-center">
-                <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
-                <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
-                <lord-icon
-                    src="https://cdn.lordicon.com/hbvyhtse.json"
-                    trigger="loop"
-                    delay="2000"
-                    colors="primary:#ffffff"
-                    style="width:50px;height:50px">
-                </lord-icon>
-              <strong>NAHUEL VELIZ</strong>
+              <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+              <lord-icon class="icon"
+                  src="https://cdn.lordicon.com/vixtkkbk.json"
+                  trigger="loop"
+                  delay="2000"
+                  colors="primary:#ffffff,secondary:#e8e230"
+                  style="width:px;height:px">
+              </lord-icon>
+              <h1>NAHUEL VELIZ</h1>
+              <span>PORTFOLIO</span>
             </a>
             <button class="navbar-toggler bton_menur" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "></span>
@@ -69,11 +70,10 @@
       </header>
     <main class="d-flex flex-column align-items-center main__galeria">
         <section class="section__galeria d-flex flex-column align-items-center">
-          <div class="text-center">
-            <h1>galería</h1>
-            <p>Una muestra de mi trabajo como fotógrafo de retrato,<br> donde también aplico conocimientos de encuadre,<br> iluminación y posproducción.</p>
+          <div class="text-center"data-aos="fade-down"data-aos-duration="1000">
+            <h1>retratos</h1>
           </div>
-            <div class="row flex-column justify-content-center align-items-center hover_img">
+            <div class="row flex-column justify-content-center align-items-center hover_img"data-aos="fade-up"data-aos-duration="1000">
                 <div class="col-lg-5 col-sm-10 mb-4">
                     <img src="../assets/img/retratos/1b.jpg" alt="img-retrato" loading="lazy">
                 </div>
@@ -113,7 +113,7 @@
         <section class="footer__nav">
                 <a href="../index.html">INICIO</a>
                 <a href="../index.html#portfolio">PORTFOLIO</a>
-                <a href="./contacto.html">CONTACTO</a>
+                <a href="../index.html#contacto">CONTACTO</a>
         </section>
 
         <section class="footer__redes">
@@ -123,10 +123,15 @@
         </section>    
 
         <section class="footer__section__1">
-            <p>todos los derechos reservados -  nahuel_veliz_2022</p>
+            <p>todos los derechos reservados -  nahuel_veliz_2023</p>
         </section>
         
     </footer>
     <!-- js_bootstrap -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--js_aos-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>

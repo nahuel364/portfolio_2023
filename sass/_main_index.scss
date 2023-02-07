@@ -3,17 +3,13 @@
 
 .cont_slider{
     height: 60%;
-    background-image: url(../assets/img/f_prueba4.svg);
+    background-image: url(../assets/img/f_sliderb.jpg);
     background-size:cover;
     background-attachment: fixed;
-    .filtro{
-        padding-top: 5rem;
-        height: 100%;
-        // backdrop-filter:blur(2px);
         .slider{
             width: 80%;
-            padding-top: 5rem;
-            padding-bottom: 5rem;
+            padding-top: 12rem;
+            padding-bottom: 2rem;
             .carousel-item{
                 height: 50%;
                 img{
@@ -22,12 +18,11 @@
             }
         }
     } 
-}
 
 /* SECCION SOBRE MI */
 
 .sobre__mi{
-    min-height: 80rem;
+    min-height: 100rem;
     background-image: url(../assets/img/f_sliderb.jpg   );
     background-size: cover;
     .sobre_mi_h2{
@@ -35,13 +30,13 @@
         background-image: url(../assets/img/f_sobremi.jpg);
         background-size: cover;
         background-attachment: fixed;
-        margin-bottom : 10%;
+        margin-bottom : 5%;
         h2{
-            width: 30%;
+            width: 90%;
             font-family:$tipografia-titulos;
-            font-weight: 400;
+            font-weight: 500;
             text-align: center;
-            font-size: 4rem;
+            font-size: 3rem;
             @include texto-mayus;
             color: map-get($map:$colores-pagina , $key:titulos );
             text-shadow: 5px 0px 1px #1D1C0D;
@@ -50,29 +45,58 @@
     }
     
     .img_yo{
+        height: 20rem;
         border-radius: 100px 0px 100px 0px;
         background-image: url(../assets/img/yo_c.JPG);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         object-fit: cover;
-        margin-right: 3rem; 
+        margin-bottom: 5%;
     }
     .sobre_mi_text{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
         min-height: 50%;
-        padding-bottom: 1rem;
-        border: #1D1C0D solid 0.5rem;
+        padding:2rem;
+        margin-bottom:5%;
+        border: #1D1C0D solid 0.3rem;
         p{
             font-family:$tipografia-general;
             font-weight: 600;
             color: #1D1C0D;
             font-size: 2rem;
-            padding: 1rem;
+            text-align:start;
+            i{
+                color: #1D1C0D;
+                font-size: 4rem;
+                background: #d6249f;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+                border-radius: 1rem;
+                margin-left: 1rem;
+                transition:transform 600ms;
+                animation-name: insta;
+                animation-duration: 2s;
+                animation-iteration-count:infinite; 
+                // animacion
+                @keyframes insta {
+                    0%{
+                        transform: scale(1,1);
+                    }
+                    50%{
+                        transform: scale(1.5,1.5);
+                    }
+                    100%{
+                        transform: scale(1,1);
+                    }
+                }
+                &:hover{
+                    transform: scale(1.5,1.5);
+                }
+            }
         }
     }
 }
@@ -80,22 +104,24 @@
 /* SECCION PORTFOLIO */
 
 #portfolio{
-    min-height: 80rem;
-    background-image: url(../assets/img/fondo_port.svg);
+    min-height: 70rem;
+    background-image: url(../assets/img/f_sliderb.jpg);
     background-size: cover;
+    padding-bottom: 5%;
+    overflow: hidden; 
     .portfolio_h2{
         min-height: 20rem;
         background-image: url(../assets/img/fondo_port.JPG);
         background-position: center;
-        background-size: cover;
+        background-size:cover;
         background-attachment: fixed;
         margin-bottom: 1%;
         h2{
-            width: 30%;
+            width: 90%;
             font-family:$tipografia-titulos;
-            font-weight: 400;
+            font-weight: 500;
             text-align: center;
-            font-size: 4rem;
+            font-size: 3rem;
             @include texto-mayus;
             color: map-get($map:$colores-pagina , $key:titulos );
             text-shadow: 5px 0px 1px #1D1C0D;
@@ -116,40 +142,72 @@
           }
             img{
                 border-radius: 1rem;
-                filter: contrast(50%);
-                transition: all 600ms;
+                box-shadow: 5px 5px 3px #1D1C0D;
             }
-            .text{
-                
-                font-size: 1.5rem;
                 h3{
-                    width: 30%;
+                    width: 50%;
                     border: aliceblue solid 0.3rem;
                     text-align: center;
-                    font-size: 3rem;
+                    font-size: 2rem;
                     text-transform: uppercase;
                 }
-            }
         }
     }
 }
 
 // RESPONSIVE
-@media(min-width:1000px){
+@media(min-width:992px){
     .cont_slider{
         height:100vh;
         margin-top:3rem; 
     }
     #portfolio{
+        .portfolio_h2{
+            
+            h2{
+                width: 30%;
+                font-size: 5rem;
+            }
+        }
         .porfolio_card{
-            .text{
                 a{
                     &:hover{
-                        background-color: aliceblue;  
-                        color: #459F92;
+                        img{
+                            filter: contrast(100%);
+                        }
                     }
+                    img{
+                        filter: contrast(50%);
+                        transition: all 600ms;
+                    }
+                        h3{
+                            width: 30%;
+                            border: aliceblue solid 0.3rem;
+                            text-align: center;
+                            font-size: 3.5rem;
+                            text-transform: uppercase;
+                            margin-top: 25%;
+                        } 
+                }
+            }
+        }
+        .sobre__mi{
+            .sobre_mi_h2{
+                margin-bottom: 1%;
+                h2{
+                    width:30% ;
+                    font-size: 5rem;
+                }
+            }
+            .img_yo{
+                height: 40rem;
+                box-shadow: 5px 5px 15px #1D1C0D;
+            }
+            .sobre_mi_text{
+                p{
+                    font-size: 2.5rem;
                 }
             }
         }
     }
-}
+
