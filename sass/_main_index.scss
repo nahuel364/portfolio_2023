@@ -2,13 +2,13 @@
 /* ESTILOS SLIDER */
 
 .cont_slider{
-    height: 60%;
-    background-image: url(../assets/img/f_sliderb.jpg);
+    height:60%;
+    background-image: url(../assets/img/f_general3.svg);
     background-size:cover;
     background-attachment: fixed;
         .slider{
             width: 80%;
-            padding-top: 12rem;
+            padding-top: 9rem;
             padding-bottom: 2rem;
             .carousel-item{
                 height: 50%;
@@ -23,7 +23,7 @@
 
 .sobre__mi{
     min-height: 100rem;
-    background-image: url(../assets/img/f_sliderb.jpg   );
+    background-image: url(../assets/img/f_general3.svg);
     background-size: cover;
     .sobre_mi_h2{
         min-height: 20rem;
@@ -105,7 +105,7 @@
 
 #portfolio{
     min-height: 70rem;
-    background-image: url(../assets/img/f_sliderb.jpg);
+    background-image: url(../assets/img/f_general3.svg);
     background-size: cover;
     padding-bottom: 5%;
     overflow: hidden; 
@@ -158,14 +158,14 @@
 // RESPONSIVE
 @media(min-width:992px){
     .cont_slider{
-        height:100vh;
-        margin-top:3rem; 
+        height:100%;
+        padding-top:5rem;
+        padding-bottom: 3rem; 
     }
     #portfolio{
         .portfolio_h2{
-            
             h2{
-                width: 30%;
+                width: fit-content;
                 font-size: 5rem;
             }
         }
@@ -195,7 +195,7 @@
             .sobre_mi_h2{
                 margin-bottom: 1%;
                 h2{
-                    width:30% ;
+                    width:fit-content;
                     font-size: 5rem;
                 }
             }

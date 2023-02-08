@@ -1,6 +1,6 @@
 .main__contacto{
     min-height: 80rem;
-    background-image: url(../assets/img/f_sliderb.jpg);
+    background-image: url(../assets/img/f_general3.svg);
     background-size: cover;
     .main_contacto_h2{
         min-height: 20rem;
@@ -93,7 +93,7 @@
     .main__contacto{
         .main_contacto_h2{
                 h2{
-                    width: 30%;
+                    width: fit-content;
                     font-size: 5rem;
                 }
             }

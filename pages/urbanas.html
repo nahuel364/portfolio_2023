@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <!--estilos_aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- estilos_menu_animado -->
+    <link rel="stylesheet" href="../hamburgers-master/dist/hamburgers.css">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +35,7 @@
               <div class="col-sm-12 col-md-12 col-lg-7 py-4">
                 <div class="redes">
                     <a href="https://www.instagram.com/nveliz36/"target="blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.behance.net/"target="blank"><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="https://www.linkedin.com/in/veliz-nahuel-1a8746265/"target="blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://wa.me/1159347414"target="blank"><i id="what" class="fa-brands fa-square-whatsapp"></i></a>
                 </div>
               </div>
@@ -62,9 +64,13 @@
               <h1>NAHUEL VELIZ</h1>
               <span>PORTFOLIO</span>
             </a>
-            <button class="navbar-toggler bton_menur" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon "></span>
+
+           <button class="hamburger hamburger--spin bton_menur" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </button>
+
           </div>
         </div>
       </header>
@@ -118,7 +124,7 @@
 
         <section class="footer__redes">
             <a href="https://www.instagram.com/nveliz36/"target="blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.behance.net/"target="blank"><i class="fa-brands fa-square-behance"></i></a>
+            <a href="https://www.linkedin.com/in/veliz-nahuel-1a8746265/"target="blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://wa.me/1159347414"target="blank"><i class="fa-brands fa-square-whatsapp"></i></a>
         </section>    
 
@@ -133,5 +139,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();
+    </script>
+     <!-- js_boton_menu -->
+     <script>
+      var hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function() {
+        hamburger.classList.toggle("is-active");
+      });
     </script>
 </body>

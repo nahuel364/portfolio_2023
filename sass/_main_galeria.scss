@@ -1,8 +1,9 @@
 .main__galeria{
-    background-image: url(../assets/img/fondo_galeriab.jpg);
+    background-image: url(../assets/img/f_galeria.svg);
     padding: 5rem;
     padding-top: 50%;
     color: map-get($map:$colores-pagina , $key:principal );
+    overflow: hidden;
     .section__galeria{
         h1{
          @include h1_paginas;
